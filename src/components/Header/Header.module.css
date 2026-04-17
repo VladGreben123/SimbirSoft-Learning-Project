@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  width: 64px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: var(--color-black);
+  z-index: 10;
+}
+
+@media (width <= 1024px) {
+  .header {
+    width: 65px;
+  }
+}
+
+@media (width <= 768px) {
+  .header {
+    width: 86px;
+  }
+}
+
+@media (width <= 480px) {
+  .header {
+    width: 100%;
+    height: 96px;
+    top: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
