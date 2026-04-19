@@ -14,8 +14,9 @@ function MainPage() {
         <p className={styles['hero-main']}>Каршеринг</p>
         <p className={styles['hero-logo']}>Need for drive</p>
         <p className={styles['hero-text']}>Поминутная аренда авто твоего города</p>
+        <button type="button" className={styles.button}>Забронировать</button>
       </div>
-      <button type="button" className={styles.button}>Забронировать</button>
+      
       <footer className={styles.footer}>
         <p className={styles.copyright}>© 2016-2019 «Need for drive»</p>
         <p className={styles.mobile}>8 (495) 234-22-44</p>

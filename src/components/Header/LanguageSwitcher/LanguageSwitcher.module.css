@@ -5,7 +5,7 @@
   height: 16px;
   left: 21px;
   bottom: 31px;
-  z-index: 100;
+  z-index: 20;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -13,4 +13,21 @@
   letter-spacing: 0%;
   color: var(--color-main-accent);
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+/* Меню открыто — скрыть на всех брейкпоинтах кроме мобильного */
+.language-switcher--menu-open {
+  display: none;
+}
+
+@media (width <= 480px) {
+  /* Закрыто — скрыть */
+  .language-switcher {
+    display: none;
+  }
+
+  /* Открыто — показать */
+  .language-switcher--menu-open {
+    display: block;
+  }
 }
