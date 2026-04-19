@@ -4,7 +4,7 @@ import routes from './routes';
 
 function App() {
   return (
-    <BrowserRouter basename="/SimbirSoft-Learning-Project">
+    <BrowserRouter>
       <Header />
       <Routes>
         {routes.map((route) => (
