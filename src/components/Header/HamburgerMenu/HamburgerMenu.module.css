@@ -14,7 +14,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--color-black2);
+  background: linear-gradient(to right, var(--color-black) calc(50% + 33px), rgb(17 21 24 / 81%) calc(50% - 32px));
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -59,8 +59,17 @@
 }
 
 @media (width <= 1024px) {
-  .menu-content{
+  .menu {
+    background: linear-gradient(to right, var(--color-black) calc(55% + 43px), rgb(17 21 24 / 81%) calc(50% - 40px));
+  }
+  .menu-content {
     margin-left: 97px;
+  }
+}
+
+@media (width <= 768px) {
+  .menu {
+    background: var(--color-black);
   }
 }
 

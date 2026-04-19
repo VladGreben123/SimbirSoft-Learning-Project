@@ -1,6 +1,6 @@
 import styles from './MainPage.module.css';
 import Slider from '../../components/Slider/Slider';
-import PlaceIcon from '../../assets/place.svg?react';
+import PlaceIcon from '../../assets/Icons/place.svg?react';
 
 function MainPage() {
   return (
@@ -23,7 +23,6 @@ function MainPage() {
       </footer>
       <div className={styles['image-panel']}>
         <Slider />
-        <div className={styles['image-panel-overlay']} />
       </div>
     </main>
   );

@@ -1,9 +1,9 @@
 import styles from './HamburgerMenu.module.css';
-import HamburgerIcon from '../../../assets/hamburger.svg?react';
-import CloseIcon from '../../../assets/close.svg?react';
-import TelegramIcon from '../../../assets/telegram.svg?react';
-import InstagramIcon from '../../../assets/instagram.svg?react';
-import FacebookIcon from '../../../assets/facebook.svg?react';
+import HamburgerIcon from '../../../assets/Icons/hamburger.svg?react';
+import CloseIcon from '../../../assets/Icons/close.svg?react';
+import TelegramIcon from '../../../assets/Icons/telegram.svg?react';
+import InstagramIcon from '../../../assets/Icons/instagram.svg?react';
+import FacebookIcon from '../../../assets/Icons/facebook.svg?react';
 
 interface HamburgerMenuProps {
   isOpen: boolean;

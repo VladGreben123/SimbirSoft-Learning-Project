@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './Header.module.css';
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
-import PlaceIcon from '../../assets/place.svg?react';
+import PlaceIcon from '../../assets/Icons/place.svg?react';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

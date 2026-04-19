@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  align-items: center;
   width: 64px;
   height: 100vh;
   left: 0;
