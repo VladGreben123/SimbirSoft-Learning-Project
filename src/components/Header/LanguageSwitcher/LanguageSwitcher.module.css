@@ -15,18 +15,15 @@
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 
-/* Меню открыто — скрыть на всех брейкпоинтах кроме мобильного */
 .language-switcher--menu-open {
   display: none;
 }
 
 @media (width <= 480px) {
-  /* Закрыто — скрыть */
   .language-switcher {
     display: none;
   }
 
-  /* Открыто — показать */
   .language-switcher--menu-open {
     display: block;
     left: 27.71px;

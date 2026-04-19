@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useEffect, useState} from 'react';
 import slider1 from '../../assets/Images/slider1.png';
 import slider2 from '../../assets/Images/slider2.png';
 import slider3 from '../../assets/Images/slider3.png';
@@ -11,6 +11,14 @@ const slides = [slider1,slider2,slider3,slider4]
 
 function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(()=>{
+      setCurrentIndex((i) => (i === slides.length-1 ? 0 : i + 1))
+    },6000);
+    return () => clearInterval(interval)
+  })
+
   return (
     <div className={styles['slider-container']} >
       <button 
