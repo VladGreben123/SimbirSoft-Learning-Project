@@ -6,6 +6,7 @@
   border: none;
   width: 32px;
   height: 32px;
+
   /* margin-left: 16px; */
   top: 32px;
   z-index: 100;
@@ -29,7 +30,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   z-index: 90;
 }
 
@@ -93,9 +93,10 @@
 }
 
 @media (width <= 480px) {
-  .menu{
+  .menu {
     align-items: flex-start;
   }
+
   .hamburger-icon {
     top: 0;
     color: var(--color-black);
@@ -107,11 +108,12 @@
     font-size: 22px;
   }
 
-  .button-icon{
-    top:0;
-    left:0;
+  .button-icon {
+    top: 0;
+    left: 0;
   }
-  .menu-list{
+
+  .menu-list {
     font-size: 22px;
   }
 }
