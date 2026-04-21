@@ -1,11 +1,9 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header/Header';
-import routes from './routes';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routes from "./routes";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
       <Routes>
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />

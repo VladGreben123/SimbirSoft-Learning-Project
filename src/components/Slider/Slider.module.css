@@ -1,45 +1,45 @@
 .slider-container {
-    flex: 1;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  flex: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slider-track {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s ease;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
 }
 
 .left-switch,
 .right-switch {
-    width: 64px;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    margin: 0;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: none;
-    border: none;
-    cursor: pointer;
+  width: 64px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.right-switch {
+  right: 0;
 }
 
 .left-switch:hover,
-.right-switch:hover{
-    background-color: rgba(14, 194, 97, 0.3);
-}
-
-.right-switch{
-    right: 0;
+.right-switch:hover {
+  background-color: rgb(14 194 97 / 30%);
 }
 
 .slider-track img {
-    min-width: 100%;
-    height: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    object-position: center;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

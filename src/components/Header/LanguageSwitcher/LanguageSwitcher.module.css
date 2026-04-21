@@ -1,9 +1,12 @@
 /* Eng */
 .language-switcher {
   position: absolute;
+  border: 0;
+  background: none;
+  cursor: pointer;
   width: 23px;
   height: 16px;
-  left: 21px;
+  left:21px;
   bottom: 31px;
   z-index: 20;
   font-family: Roboto, sans-serif;
@@ -15,21 +18,28 @@
   text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 
-.language-switcher--menu-open {
+.language-switcher-menu-open {
   display: none;
 }
+
+@media (width <= 768px) {
+  .language-switcher{
+    left:28px;
+  }
+}
+
 
 @media (width <= 480px) {
   .language-switcher {
     display: none;
   }
 
-  .language-switcher--menu-open {
+  .language-switcher-menu-open {
     display: block;
-    left: 27.71px;
-    top: 524px;
     position: absolute;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    left:8px;
+    top: 508px;
+    text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
     z-index: 100;
   }
 }

@@ -1,4 +1,4 @@
-import styles from './LanguageSwitcher.module.css';
+import styles from "./LanguageSwitcher.module.css";
 
 interface LanguageSwitcherProps {
   isMenuOpen: boolean;
@@ -6,9 +6,11 @@ interface LanguageSwitcherProps {
 
 function LanguageSwitcher({ isMenuOpen }: LanguageSwitcherProps) {
   return (
-    <div className={`${styles['language-switcher']} ${isMenuOpen ? styles['language-switcher--menu-open'] : ''}`}>
+    <button
+      className={`${styles["language-switcher"]} ${isMenuOpen ? styles["language-switcher-menu-open"] : ""}`}
+    >
       Eng
-    </div>
+    </button>
   );
 }
 
