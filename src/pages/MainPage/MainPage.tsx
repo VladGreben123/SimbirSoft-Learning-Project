@@ -1,7 +1,7 @@
-import styles from './MainPage.module.css';
-import Slider from '../../components/Slider/Slider';
-import PlaceIcon from '../../assets/Icons/place.svg?react';
-import Sidebar from '../../components/Header/Sidebar';
+import styles from "./MainPage.module.css";
+import Slider from "../../components/Slider/Slider";
+import PlaceIcon from "../../assets/Icons/place.svg?react";
+import Sidebar from "../../components/Header/Sidebar";
 
 function MainPage() {
   return (
@@ -15,10 +15,10 @@ function MainPage() {
             Ульяновск
           </div>
         </header>
-        <div className={styles['hero-block']}>
-          <h2 className={styles['hero-main']}>Каршеринг</h2>
-          <p className={styles['hero-logo']}>Need for drive</p>
-          <p className={styles['hero-text']}>
+        <div className={styles["hero-block"]}>
+          <h2 className={styles["hero-main"]}>Каршеринг</h2>
+          <p className={styles["hero-logo"]}>Need for drive</p>
+          <p className={styles["hero-text"]}>
             Поминутная аренда авто твоего города
           </p>
           <button type="button" className={styles.button}>
@@ -34,7 +34,7 @@ function MainPage() {
             </a>
           </p>
         </footer>
-        <div className={styles['image-panel']}>
+        <div className={styles["image-panel"]}>
           <Slider />
         </div>
       </main>

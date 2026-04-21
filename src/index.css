@@ -11,7 +11,7 @@
   --color-main-accent: #0ec261;
   --color-black: #111518;
   --color-gray: #999;
-  --color-gray-light: #eee;
+  --color-gray-light: rgb(238 238 238 / 100%);
 }
 
 body {

@@ -48,17 +48,17 @@
   letter-spacing: 0%;
 }
 
-.menuLink {
+.menu-link {
   color: var(--color-bg);
   text-decoration: none;
 }
 
-.menu-list li {
-  margin-bottom: 15px;
+.menu-link:hover {
+  color: var(--color-main-accent);
 }
 
-.menu-list li:hover {
-  color: var(--color-main-accent);
+.menu-list li {
+  margin-bottom: 15px;
 }
 
 .socials {
@@ -68,7 +68,7 @@
   margin-top: 38px;
 }
 
-.socialIcon:hover path {
+.socials a:hover path {
   fill: var(--color-main-accent);
 }
 

@@ -1,7 +1,7 @@
-import { useCallback, useState, memo } from 'react';
-import styles from './Sidebar.module.css';
-import HamburgerMenu from './HamburgerMenu/HamburgerMenu';
-import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
+import { useCallback, useState, memo } from "react";
+import styles from "./Sidebar.module.css";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import LanguageSwitcher from "./LanguageSwitcher/LanguageSwitcher";
 
 function Sidebar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

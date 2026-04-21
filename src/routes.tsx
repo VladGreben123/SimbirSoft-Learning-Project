@@ -1,5 +1,5 @@
-import MainPage from './pages/MainPage/MainPage';
+import MainPage from "./pages/MainPage/MainPage";
 
-const routes = [{ path: '/', element: <MainPage /> }];
+const routes = [{ path: "/", element: <MainPage /> }];
 
 export default routes;
