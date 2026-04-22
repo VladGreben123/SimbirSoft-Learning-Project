@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Slides, { slidesLenght } from "./Slides/slides";
+import Slides, { slidesLength } from "./Slides/slides";
 import styles from "./Slider.module.css";
 import LeftIcon from "../../assets/Icons/left.svg?react";
 import RightIcon from "../../assets/Icons/right.svg?react";
@@ -7,13 +7,21 @@ import Dot from "../../assets/Icons/dot.svg?react";
 
 function Slider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [lastInteraction, setLastInteraction] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((i) => (i === slidesLenght - 1 ? 0 : i + 1));
+      if (Date.now() - lastInteraction >= 10000) {
+        setCurrentIndex((i) => (i === slidesLength - 1 ? 0 : i + 1));
+      }
     }, 5000);
     return () => clearInterval(interval);
-  });
+  }, [lastInteraction]);
+
+  const handleInteraction = (updateIndex: () => void) => {
+    updateIndex();
+    setLastInteraction(Date.now());
+  };
 
   return (
     <div className={styles["slider-container"]}>
@@ -21,8 +29,8 @@ function Slider() {
         type="button"
         className={styles["left-switch"]}
         onClick={() => {
-          setCurrentIndex(
-            currentIndex === 0 ? slidesLenght - 1 : currentIndex - 1,
+          handleInteraction(() =>
+            setCurrentIndex((i) => (i === 0 ? slidesLength - 1 : i - 1)),
           );
         }}
       >
@@ -38,35 +46,33 @@ function Slider() {
         type="button"
         className={styles["right-switch"]}
         onClick={() => {
-          setCurrentIndex(
-            currentIndex === slidesLenght - 1 ? 0 : currentIndex + 1,
+          handleInteraction(() =>
+            setCurrentIndex((i) => (i === slidesLength - 1 ? 0 : i + 1)),
           );
         }}
       >
         <RightIcon />
       </button>
-      <nav className={styles['slider-nav']}>
-        <ul className={styles['slider-nav-list']}>
-            <li className={styles['slider-nav-item']}>
-              <button type="button">
-                <Dot/>
+      <nav className={styles["slider-nav"]}>
+        <ul className={styles["slider-nav-list"]}>
+          {Array.from({ length: slidesLength }, (_, i) => (
+            <li key={i}>
+              <button
+                type="button"
+                onClick={() => {
+                  handleInteraction(() => setCurrentIndex(i));
+                }}
+              >
+                <Dot
+                  className={
+                    i === currentIndex
+                      ? styles["slider-nav-item-active"]
+                      : styles["slider-nav-item-passive"]
+                  }
+                />
               </button>
             </li>
-            <li className={styles['slider-nav-item']}>
-              <button type="button">
-                <Dot/>
-              </button>
-            </li>
-            <li className={styles['slider-nav-item']}>
-              <button type="button">
-                <Dot/>
-              </button>
-            </li>
-            <li className={styles['slider-nav-item']}>
-              <button type="button">
-                <Dot/>
-              </button>
-            </li>
+          ))}
         </ul>
       </nav>
     </div>

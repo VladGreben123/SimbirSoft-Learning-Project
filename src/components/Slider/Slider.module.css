@@ -109,19 +109,23 @@
   bottom: 32px;
 }
 
-.slider-nav-list{
+.slider-nav-list {
   list-style: none;
   display: flex;
   gap: 8px;
 }
 
-.slider-nav-item{
-  fill: var(--color-main-accent);
-}
-
-.slider-nav-item button{
+.slider-nav-list button {
   border: 0;
   background: none;
+}
+
+.slider-nav-item-active {
+  color: var(--color-main-accent);
+}
+
+.slider-nav-item-passive {
+  color: var(--color-bg);
 }
 
 @media (width <= 1024px) {

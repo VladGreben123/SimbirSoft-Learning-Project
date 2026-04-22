@@ -54,6 +54,6 @@ function Slides() {
   );
 }
 
-export const slidesLenght = slides.length;
+export const slidesLength = slides.length;
 
 export default Slides;
