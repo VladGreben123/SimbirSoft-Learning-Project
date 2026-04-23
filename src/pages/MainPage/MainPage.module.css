@@ -3,7 +3,7 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 96px 1fr auto 90px;
+  grid-template-rows: 99px 1fr auto 90px;
   width: calc(100% - 64px);
   margin-left: 64px;
   background-color: var(--color-bg);
