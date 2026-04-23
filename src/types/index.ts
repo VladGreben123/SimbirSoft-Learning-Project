@@ -5,15 +5,3 @@ export interface Slide {
   buttonClass: string;
   img: string;
 }
-
-type Point = {
-  id: number
-  name: string
-}
-
-type City = {
-  id: number
-  name: string
-  points: Point[]
-}
-
