@@ -39,7 +39,6 @@
   }
 }
 
-
 @media (width <= 768px) {
   .logo {
     grid-column: 1;
@@ -80,5 +79,3 @@
     padding: 0;
   }
 }
-
-
