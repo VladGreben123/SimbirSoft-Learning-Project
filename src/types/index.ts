@@ -5,3 +5,12 @@ export interface Slide {
   buttonClass: string;
   img: string;
 }
+
+export type Point = {
+  name: string;
+}
+
+export type City = {
+  name: string;
+  points: Point[];
+}
