@@ -6,11 +6,14 @@ export interface Slide {
   img: string;
 }
 
-export type Point = {
-  name: string;
-};
+type Point = {
+  id: number
+  name: string
+}
 
-export type City = {
-  name: string;
-  points: Point[];
-};
+type City = {
+  id: number
+  name: string
+  points: Point[]
+}
+
