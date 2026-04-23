@@ -1,0 +1,44 @@
+/* Eng */
+.language-switcher {
+  position: absolute;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  width: 23px;
+  height: 16px;
+  left: 21px;
+  bottom: 31px;
+  z-index: 20;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-main-accent);
+  text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+
+.language-switcher-menu-open {
+  display: none;
+}
+
+@media (width <= 768px) {
+  .language-switcher {
+    left: 28px;
+  }
+}
+
+@media (width <= 480px) {
+  .language-switcher {
+    display: none;
+  }
+
+  .language-switcher-menu-open {
+    display: block;
+    position: absolute;
+    left: 8px;
+    top: 508px;
+    text-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+    z-index: 100;
+  }
+}

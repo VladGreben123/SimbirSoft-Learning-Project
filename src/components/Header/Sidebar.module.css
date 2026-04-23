@@ -1,0 +1,42 @@
+.aside {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 64px;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: var(--color-black);
+  z-index: 10;
+}
+
+.aside-right {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 16px;
+}
+
+@media (width <= 768px) {
+  .aside {
+    width: 86px;
+  }
+}
+
+@media (width <= 480px) {
+  .aside {
+    display: flex;
+    background: var(--color-bg);
+    width: 32px;
+    height: 32px;
+    top: 16px;
+    left: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .aside-right {
+    display: flex;
+  }
+}
