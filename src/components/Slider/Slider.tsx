@@ -55,24 +55,22 @@ function Slider() {
       </button>
       <nav className={styles["slider-nav"]}>
         <ul className={styles["slider-nav-list"]}>
-          {Array.from({ length: slidesLength }, (_, i) => (
-            <li key={i}>
-              <button
-                type="button"
-                onClick={() => {
-                  handleInteraction(() => setCurrentIndex(i));
-                }}
-              >
-                <Dot
-                  className={
-                    i === currentIndex
-                      ? styles["slider-nav-item-active"]
-                      : styles["slider-nav-item-passive"]
-                  }
-                />
-              </button>
-            </li>
-          ))}
+          {Array.from({ length: slidesLength }, (_, i) => {
+            const dotClass =
+              i === currentIndex
+                ? styles["slider-nav-item-active"]
+                : styles["slider-nav-item-passive"];
+            const dotOnClick = () => {
+              handleInteraction(() => setCurrentIndex(i));
+            };
+            return (
+              <li key={i}>
+                <button type="button" onClick={dotOnClick}>
+                  <Dot className={dotClass} />
+                </button>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
