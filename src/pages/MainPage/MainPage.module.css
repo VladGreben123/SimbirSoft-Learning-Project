@@ -65,6 +65,10 @@
   color: var(--color-bg);
 }
 
+.button:hover{
+  filter: (0.9);
+}
+
 .bookButton{
   text-decoration: none;
   color: var(--color-bg);

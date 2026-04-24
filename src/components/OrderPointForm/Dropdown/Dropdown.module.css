@@ -38,6 +38,10 @@
   color: var(--color-black);
 }
 
+.clearButton::after {
+  display: none;
+}
+
 .dropdown {
   position: absolute;
   top: 100%;

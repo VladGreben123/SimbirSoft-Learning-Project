@@ -16,6 +16,7 @@
   background-blend-mode: darken;
   border-width: 0px;
   color: var(--color-bg);
-  padding: 4px;
+  padding: 5px;
+  border-radius: 5px;
   margin-top: 3px;
 }

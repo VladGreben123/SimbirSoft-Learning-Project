@@ -30,7 +30,9 @@ function BookPage() {
                     {selectedPoint?.name}
                   </span>
                 </p>
-                <button type='button' className={styles.orderButton} disabled={!selectedPoint}> Выбрать модель</button>
+                <button type='button' className={styles.orderButton} disabled={!selectedPoint}>
+                  <span>Выбрать модель</span>
+                </button>
               </div>
             </div>
           </div>

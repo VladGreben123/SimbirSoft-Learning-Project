@@ -23,7 +23,7 @@ function PointMarkers({ points, onSelect }: { points: City['points'], onSelect: 
               onClick={() => { onSelect(point.name); map.closePopup() }}
               className={styles.mapPopUpButton}
             >
-              Выбрать
+              <span>Выбрать</span>
             </button>
           </Popup>
         </CircleMarker>
