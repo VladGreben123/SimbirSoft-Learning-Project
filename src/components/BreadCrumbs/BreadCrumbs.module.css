@@ -3,16 +3,18 @@
     border-top: 1px solid var(--color-gray-light);
     border-bottom: 1px solid var(--color-gray-light);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .breadCrumbs{
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 32px;
     gap:16px;
-    width: 100dvw;
+    width: 100%;
     max-width: 1248px;
 }
 
@@ -23,4 +25,17 @@
 
 .active{
     color: var(--color-main-accent);
+}
+
+@media (width <= 1024px) {
+    .breadCrumbsContainer{
+        padding: 0 32px;
+    }
+}
+
+@media (width <= 480px) {
+    .breadCrumbs{
+        height: 64px;
+        gap: 8px;
+    }
 }

@@ -7,6 +7,7 @@
   position: relative;
   padding-left: 64px;
   height: 100dvh;
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 96px 32px 1fr;
@@ -94,4 +95,77 @@
 .orderButton:disabled {
   background: var(--color-gray-light);
   cursor: not-allowed;
+}
+
+@media (width <= 1024px) {
+  .pageWrapper {
+    padding-left: 64px;
+  }
+
+  .orderContainer {
+    width: 100%;
+    padding: 0 32px;
+  }
+}
+@media (width <= 768px) {
+  .pageWrapper {
+    padding-left: 86px;
+    height: auto;
+    min-height: 100dvh;
+  }
+
+  .orderContainer {
+    grid-template-columns: 1fr;
+    padding: 0 32px;
+  }
+
+  .orderSideContainer {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--color-gray-light);
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  .orderButton {
+    width: 100%;
+  }
+}
+
+@media (width <= 480px) {
+  .pageWrapper {
+    padding-left: 0;
+    height: auto;
+    min-height: 100dvh;
+    grid-template-rows: 96px 64px 1fr;
+  }
+
+  .orderContainer {
+    padding: 0 16px;
+    overflow-y: auto;
+  }
+
+  .orderConfirm {
+    height: auto;
+  }
+
+  .orderSideContainer {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .orderButton {
+    width: 100%;
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .orderTitle {
+    margin-top: 16px;
+  }
+
+  .orderPoint {
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
 }

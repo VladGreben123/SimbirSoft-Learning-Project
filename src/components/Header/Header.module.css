@@ -1,6 +1,7 @@
 .header {
   padding-right: 64px;
   padding-left: 64px;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
