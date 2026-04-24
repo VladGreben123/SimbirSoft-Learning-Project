@@ -16,11 +16,11 @@
   letter-spacing: 0%;
 }
 
-.formContainer .cityLabel {
+.cityLabel {
   padding-right: 8px;
 }
 
-.formContainer .pointLabel {
+.pointLabel {
   padding-right: 5px;
 }
 
@@ -105,5 +105,9 @@
   }
   .mapTitle{
     margin-top: 8px;
+  }
+  .pointLabel{
+    text-align: end;
+    padding-right:8px;
   }
 }
