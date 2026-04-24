@@ -1,4 +1,4 @@
-import styles from './header.module.css'
+import styles from './Header.module.css'
 import PlaceIcon from "../../assets/Icons/place.svg?react";
 
 function Header(){
