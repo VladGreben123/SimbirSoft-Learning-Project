@@ -1,18 +1,43 @@
-import styles from './BookPage.module.css'
-import Sidebar from '../../components/Sidebar/Sidebar'
-import Header from '../../components/Header/Header'
+import { useState } from 'react';
+import styles from './BookPage.module.css';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import Header from '../../components/Header/Header';
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs';
+import OrderPointForm from '../../components/OrderPointForm/OrderPointForm';
+import type { Point } from '../../types/index';
 
-function BookPage(){
-    return(
-        <>
-            <Sidebar/>
-            <main className={styles.main}>
-                <Header/>
-                <BreadCrumbs/>
-            </main>
-        </>
-    );
+function BookPage() {
+  const [selectedPoint, setSelectedPoint] = useState<Point | null>(null);
+
+  return (
+    <>
+      <Sidebar />
+      <main className={styles.main}>
+        <Header />
+        <BreadCrumbs />
+        <div className={styles.orderContainer}>
+          <OrderPointForm onPointSelect={setSelectedPoint} />
+          <div className={styles.orderSideContainer}>
+            <div className={styles.orderConfirm}>
+              <h3 className={styles.orderTitle}>Ваш заказ:</h3>
+              <p className={styles.orderPoint}>
+                <span className={styles.orderPointText}>
+                  Пункт выдачи
+                </span> 
+                ...................... 
+                <span className={styles.orderPointName}>
+                  {selectedPoint?.name}
+                </span>
+              </p>
+              <p className={styles.orderTotal}>Цена: <span className={styles.orderPrice}>8 000 до 12 000 ₽</span></p>
+              <button type='button' className={styles.orderButton}>Выбрать модель</button>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+    </>
+  );
 }
 
 export default BookPage;
