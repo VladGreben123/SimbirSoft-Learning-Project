@@ -4,10 +4,12 @@ import PlaceIcon from "../../assets/Icons/place.svg?react";
 function Header(){
     return(
     <header className={styles.header}>
-        <h1 className={styles.logo}>Need for drive</h1>
-        <div className={styles.map}>
-            <PlaceIcon />
-            Ульяновск
+        <div className={styles.headerContent}>
+            <h1 className={styles.logo}>Need for drive</h1>
+            <div className={styles.map}>
+                <PlaceIcon />
+                Ульяновск
+            </div>
         </div>
     </header>
     );

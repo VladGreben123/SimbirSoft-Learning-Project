@@ -4,17 +4,21 @@
 }
 
 .main {
+  position: relative;
+  padding-left: 64px;
   height: 100dvh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 96px 32px 1fr;
-  width: calc(100% - 128px);
-  max-width: 1376px;
-  justify-self: center;
+  width: 100vw;
+  justify-content: center;
   background-color: var(--color-bg);
 }
 
 .orderContainer{
+  width: calc(100% - 128px);
+  max-width: 1248px;
+  justify-self: center;
   display: grid;
   grid-template-columns: 1fr 320px;
   grid-template-rows:1fr;

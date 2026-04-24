@@ -3,6 +3,7 @@ import styles from "./OrderPointForm.module.css";
 import type { City, Point } from "../../types/index";
 import formData from "./OrderPointFormData";
 import Dropdown from "./Dropdown/Dropdown";
+import mapImage from "../../assets/Images/map.png"
 
 type Props = {
   onPointSelect: (point: Point) => void;
@@ -40,30 +41,37 @@ function OrderPointForm({ onPointSelect }: Props) {
 
   return (
     <div className={styles.formContainer}>
-      <form>
-        <Dropdown
-          id="city"
-          label="Город"
-          labelClass={styles.cityLabel}
-          value={cityValue}
-          onChange={handleCityChange}
-          onSelect={handleCitySelect}
-          options={cityOptions}
-          placeholder="Начните вводить город"
-        />
-      </form>
-      <form>
-        <Dropdown
-          id="point"
-          label="Пункт выдачи"
-          labelClass={styles.pointLabel}
-          value={pointValue}
-          onChange={setPointValue}
-          onSelect={handlePointSelect}
-          options={pointOptions}
-          placeholder="Начните вводить пункт ..."
-        />
-      </form>
+      <div className={styles.formInputs}>
+        <form>
+          <Dropdown
+            id="city"
+            label="Город"
+            labelClass={styles.cityLabel}
+            value={cityValue}
+            onChange={handleCityChange}
+            onSelect={handleCitySelect}
+            options={cityOptions}
+            placeholder="Начните вводить город"
+          />
+        </form>
+        <form>
+          <Dropdown
+            id="point"
+            label="Пункт выдачи"
+            labelClass={styles.pointLabel}
+            value={pointValue}
+            onChange={setPointValue}
+            onSelect={handlePointSelect}
+            options={pointOptions}
+            placeholder="Начните вводить пункт ..."
+          />
+        </form>
+      </div>
+      
+      <p className={styles.mapTitle}>Выбрать на карте:</p>
+      <div className={styles.mapContainer}>
+        <img src={mapImage}></img>  
+      </div>
     </div>
   );
 }

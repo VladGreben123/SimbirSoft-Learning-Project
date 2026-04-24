@@ -13,7 +13,7 @@ function BookPage() {
     <>
       <Sidebar />
       <main className={styles.main}>
-        <Header />
+        <Header/>
         <BreadCrumbs />
         <div className={styles.orderContainer}>
           <OrderPointForm onPointSelect={setSelectedPoint} />

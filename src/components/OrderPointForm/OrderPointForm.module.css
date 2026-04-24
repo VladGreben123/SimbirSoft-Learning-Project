@@ -2,10 +2,9 @@
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 320px;
+  align-items: flex-start;
+  width: 736px;
   gap: 16px;
-  margin-left: 64px;
 }
 
 .formContainer label {
@@ -34,3 +33,32 @@
   border: 0;
   border-bottom: 1px solid var(--color-gray);
 }
+
+.formContainer .mapTitle{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin-top: 32px;
+  width: 100%;
+  justify-self: start;
+}
+
+.formInputs{
+  gap: 16px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.mapContainer{
+  width: 736px;
+  height: 352px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+/* .mapContainer img{
+  scale: 0.5;
+} */
