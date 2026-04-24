@@ -8,9 +8,11 @@ export interface Slide {
 
 export type Point = {
   name: string;
+  position: [number, number];
 }
 
 export type City = {
   name: string;
+  position: [number,number];
   points: Point[];
 }

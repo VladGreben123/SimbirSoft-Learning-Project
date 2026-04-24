@@ -26,8 +26,8 @@ function Dropdown({
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const filtered = options.filter(
-    (o) => o.toLowerCase().includes(value.toLowerCase()) && value.length > 0,
+  const filtered = options.filter((o) =>
+    o.toLowerCase().includes(value.toLowerCase()),
   );
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function Dropdown({
             onChange(e.target.value);
             setIsOpen(true);
           }}
-          onFocus={() => value.length > 0 && setIsOpen(true)}
+          onFocus={() => setIsOpen(true)}
           autoComplete="off"
         />
         {value && (

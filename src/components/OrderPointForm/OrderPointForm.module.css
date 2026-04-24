@@ -52,13 +52,30 @@
   align-items: flex-end;
 }
 
-.mapContainer{
+.map{
   width: 736px;
   height: 352px;
-  margin-top: 16px;
   overflow: hidden;
 }
 
-/* .mapContainer img{
-  scale: 0.5;
-} */
+.mapContainer{
+  width: 100%;
+  height: 400px;
+}
+
+.mapContainer :global(.leaflet-popup-content) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.mapPopUpButton{
+  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background-blend-mode: darken;
+  border-width: 0px;
+  color: var(--color-bg);
+  padding: 4px;
+  margin-top: 3px;
+}

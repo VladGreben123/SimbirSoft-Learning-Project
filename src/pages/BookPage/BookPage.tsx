@@ -16,7 +16,7 @@ function BookPage() {
         <Header/>
         <BreadCrumbs />
         <div className={styles.orderContainer}>
-          <OrderPointForm onPointSelect={setSelectedPoint} />
+          <OrderPointForm onPointSelect={setSelectedPoint}/>
           <div className={styles.orderSideContainer}>
             <div className={styles.orderConfirm}>
               <h3 className={styles.orderTitle}>Ваш заказ:</h3>
