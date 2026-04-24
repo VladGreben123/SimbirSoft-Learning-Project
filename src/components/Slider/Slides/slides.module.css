@@ -25,14 +25,20 @@
   z-index: 2;
 }
 
-.slider-item-info h3 {
+.sliderItemImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sliderItemHead {
   font-weight: 500;
   font-size: 40px;
   line-height: 47px;
   color: var(--color-bg);
 }
 
-.slider-item-info p {
+.sliderItemText {
   margin-top: 8px;
   font-weight: 300;
   font-size: 24px;
@@ -40,7 +46,7 @@
   color: var(--color-gray-light);
 }
 
-.slider-item-info button {
+.sliderItemButton {
   margin-top: 32px;
   width: 164px;
   height: 48px;

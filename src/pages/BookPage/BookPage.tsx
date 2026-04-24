@@ -29,7 +29,10 @@ function BookPage() {
                   {selectedPoint?.name}
                 </span>
               </p>
+<<<<<<< Updated upstream
               {/* <p className={styles.orderTotal}>Цена: <span className={styles.orderPrice}>8 000 до 12 000 ₽</span></p> */}
+=======
+>>>>>>> Stashed changes
               <button type='button' className={styles.orderButton} disabled={!selectedPoint}> Выбрать модель</button>
             </div>
           </div>

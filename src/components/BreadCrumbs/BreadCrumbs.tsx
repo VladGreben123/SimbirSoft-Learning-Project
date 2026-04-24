@@ -16,6 +16,7 @@ function BreadCrumbs({ pointSelected }: Props) {
     const location = useLocation()
 
     return(
+<<<<<<< Updated upstream
         <div className={styles.breadCrumbs}>
             {breadCrumbsLinks.map((item, index) => (
                 <>
@@ -31,6 +32,26 @@ function BreadCrumbs({ pointSelected }: Props) {
                 </>
         ))}
         </div>
+=======
+        <div className={styles.breadCrumbsContainer}>
+            <div className={styles.breadCrumbs}>
+                {breadCrumbsLinks.map((item, index) => (
+                    <>
+                        <a
+                        key={item.link}
+                        href={pointSelected ? item.link : undefined}
+                        className={`${location.pathname == item.link ? styles.active : styles.passive} ${styles.breadCrumbsLink}`}
+                        aria-disabled={!pointSelected}
+                        >
+                        {item.content}
+                        </a>
+                        {index < breadCrumbsLinks.length - 1 && <Arrow/>}
+                    </>
+                ))}
+            </div>
+        </div>
+        
+>>>>>>> Stashed changes
     )
 }
 

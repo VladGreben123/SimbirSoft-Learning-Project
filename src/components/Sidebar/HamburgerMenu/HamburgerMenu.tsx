@@ -39,7 +39,7 @@ function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
           <div className={styles["menu-content"]}>
             <ul className={styles["menu-list"]}>
               {menuItems.map((item) => (
-                <li key={item.label}>
+                <li key={item.label} className={styles.menuItem}>
                   <a
                     href={item.href}
                     target="_blank"
@@ -54,7 +54,12 @@ function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
             <ul className={styles.socials}>
               {socialsIcons.map(({ icon: Icon, name, href }) => (
                 <li key={name}>
-                  <a href={href} target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href={href} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.socialLink}
+                  >
                     <Icon className={styles["social-icon"]} />
                   </a>
                 </li>
