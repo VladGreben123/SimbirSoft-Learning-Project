@@ -53,10 +53,7 @@ function Dropdown({
           id={id}
           value={value}
           placeholder={placeholder}
-<<<<<<< Updated upstream
-=======
           className={styles.input}
->>>>>>> Stashed changes
           onChange={(e) => {
             const val = e.target.value;
             if (val.length > 150 || (val.length > 0 && val.trim() === "")) return;

@@ -10,12 +10,7 @@
   align-items: center;
 }
 
-<<<<<<< Updated upstream
-.inputWrapper input {
-  font-family: Roboto, sans-serif;
-=======
 .input {
->>>>>>> Stashed changes
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
@@ -53,10 +48,6 @@
   background: var(--color-bg);
   border: 1px solid var(--color-gray-light);
   border-right: none;
-<<<<<<< Updated upstream
-  margin-top: 1px;
-=======
->>>>>>> Stashed changes
   list-style: none;
   z-index: 10;
   padding: 0;

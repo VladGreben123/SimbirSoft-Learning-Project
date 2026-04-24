@@ -10,10 +10,6 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 96px 32px 1fr;
-<<<<<<< Updated upstream
-  width: 100vw;
-=======
->>>>>>> Stashed changes
   justify-content: center;
   background-color: var(--color-bg);
 }
