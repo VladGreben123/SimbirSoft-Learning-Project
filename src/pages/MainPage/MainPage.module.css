@@ -1,13 +1,17 @@
-.main {
+.pageWrapper {
   min-height: 100vh;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 99px 1fr auto 90px;
+  grid-template-rows: 96px 1fr auto 96px;
   width: calc(100% - 64px);
   margin-left: 64px;
   background-color: var(--color-bg);
   overflow: hidden;
+}
+
+.main {
+  display: contents;
 }
 
 .hero-block {
@@ -114,7 +118,7 @@
 
 /* ── 1024px ── */
 @media (width <= 1024px) {
-  .main {
+  .pageWrapper {
     grid-template-columns: 1fr 410px;
     width: calc(100vw - 65px);
     min-height: 811px;
@@ -135,7 +139,7 @@
 
 /* ── 768px ── */
 @media (width <= 768px) {
-  .main {
+  .pageWrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 99px 1fr auto 90px;
     width: calc(100vw - 86px);
@@ -166,7 +170,7 @@
 
 /* ── 320px (mobile) ── */
 @media (width <= 480px) {
-  .main {
+  .pageWrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 96px auto auto;
     width: 100vw;

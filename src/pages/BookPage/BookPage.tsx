@@ -12,29 +12,30 @@ function BookPage() {
   return (
     <>
       <Sidebar />
-      <main className={styles.main}>
+      <div className={styles.pageWrapper}>
         <Header/>
         <BreadCrumbs pointSelected={!!selectedPoint} />
-        <div className={styles.orderContainer}>
-          <OrderPointForm onPointSelect={setSelectedPoint} onPointClear={() => setSelectedPoint(null)}/>
-          <div className={styles.orderSideContainer}>
-            <div className={styles.orderConfirm}>
-              <h3 className={styles.orderTitle}>Ваш заказ:</h3>
-              <p className={selectedPoint ? styles.orderPoint : styles.orderPointInactive}>
-                <span className={styles.orderPointText}>
-                  Пункт выдачи
-                </span> 
-                ...................... 
-                <span className={styles.orderPointName}>
-                  {selectedPoint?.name}
-                </span>
-              </p>
-              <button type='button' className={styles.orderButton} disabled={!selectedPoint}> Выбрать модель</button>
+        <main className={styles.main}>
+          <div className={styles.orderContainer}>
+            <OrderPointForm onPointSelect={setSelectedPoint} onPointClear={() => setSelectedPoint(null)}/>
+            <div className={styles.orderSideContainer}>
+              <div className={styles.orderConfirm}>
+                <h3 className={styles.orderTitle}>Ваш заказ:</h3>
+                <p className={selectedPoint ? styles.orderPoint : styles.orderPointInactive}>
+                  <span className={styles.orderPointText}>
+                    Пункт выдачи
+                  </span>
+                  ......................
+                  <span className={styles.orderPointName}>
+                    {selectedPoint?.name}
+                  </span>
+                </p>
+                <button type='button' className={styles.orderButton} disabled={!selectedPoint}> Выбрать модель</button>
+              </div>
             </div>
           </div>
-        </div>
-        
-      </main>
+        </main>
+      </div>
     </>
   );
 }

@@ -7,7 +7,7 @@
   left: 0;
   top: 0;
   background: var(--color-black);
-  z-index: 10;
+  z-index: 1000;
 }
 
 .aside-right {
