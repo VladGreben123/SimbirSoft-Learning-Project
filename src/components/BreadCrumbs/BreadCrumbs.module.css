@@ -1,0 +1,20 @@
+.breadCrumbs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: calc((100% - 1248px) / 2);
+    height: 32px;
+    gap:16px;
+    width: 100dvw;
+    border-top: 1px solid var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-light);
+}
+
+.breadCrumbs a{
+    text-decoration: none;
+    color: var(--color-gray);
+}
+
+.breadCrumbs .active{
+    color: var(--color-main-accent);
+}

@@ -61,7 +61,7 @@
   color: var(--color-bg);
 }
 
-.bookButton {
+.bookButton{
   text-decoration: none;
   color: var(--color-bg);
 }
@@ -126,10 +126,6 @@
     padding-top: 130px;
   }
 
-  .button {
-    margin-left: 32px;
-  }
-
   .footer {
     padding-left: 32px;
     padding-right: 32px;
@@ -155,7 +151,6 @@
 
   .button {
     grid-column: 1;
-    margin-left: 32px;
   }
 
   .footer {

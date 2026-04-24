@@ -1,0 +1,81 @@
+.formContainer {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 736px;
+  gap: 16px;
+}
+
+.formContainer label {
+  justify-self: left;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.formContainer .cityLabel {
+  padding-right: 8px;
+}
+
+.formContainer .pointLabel {
+  padding-right: 5px;
+}
+
+.formContainer input {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  width: 224px;
+  padding-left: 8px;
+  border: 0;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.formContainer .mapTitle{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0%;
+  margin-top: 32px;
+  width: 100%;
+  justify-self: start;
+}
+
+.formInputs{
+  gap: 16px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.map{
+  width: 736px;
+  height: 352px;
+  overflow: hidden;
+}
+
+.mapContainer{
+  width: 100%;
+  height: 400px;
+}
+
+.mapContainer :global(.leaflet-popup-content) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.mapPopUpButton{
+  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background-blend-mode: darken;
+  border-width: 0px;
+  color: var(--color-bg);
+  padding: 4px;
+  margin-top: 3px;
+}
