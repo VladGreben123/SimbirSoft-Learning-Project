@@ -8,9 +8,10 @@ import 'leaflet/dist/leaflet.css'
 
 type Props = {
   onPointSelect: (point: Point) => void;
+  onPointClear: () => void;
 };
 
-function OrderPointForm({ onPointSelect}: Props) {
+function OrderPointForm({ onPointSelect, onPointClear }: Props) {
   const [cityValue, setCityValue] = useState("");
   const [pointValue, setPointValue] = useState("");
   const [mapPosition, setMapPosition] = useState([0,0]);
@@ -24,14 +25,21 @@ function OrderPointForm({ onPointSelect}: Props) {
   const handleCityChange = useCallback((val: string) => {
     setCityValue(val);
     setPointValue("");
-  }, []);
+    onPointClear();
+  }, [onPointClear]);
 
   const handleCitySelect = useCallback((name: string) => {
     setCityValue(name);
     setPointValue("");
+    onPointClear();
     const city = formData.find((c: City) => c.name === name);
     if (city) setMapPosition(city.position);
-  }, []);
+  }, [onPointClear]);
+
+  const handlePointChange = useCallback((val: string) => {
+    setPointValue(val);
+    onPointClear();
+  }, [onPointClear]);
 
   const handlePointSelect = useCallback(
     (name: string) => {
@@ -64,7 +72,7 @@ function OrderPointForm({ onPointSelect}: Props) {
             label="Пункт выдачи"
             labelClass={styles.pointLabel}
             value={pointValue}
-            onChange={setPointValue}
+            onChange={handlePointChange}
             onSelect={handlePointSelect}
             options={pointOptions}
             placeholder="Начните вводить пункт ..."

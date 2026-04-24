@@ -50,6 +50,10 @@
   color: var(--color-gray);
 }
 
+.orderPointInactive{
+  display: none;
+}
+
 .orderPointText{
   color: var(--color-black);
 }
@@ -75,5 +79,16 @@
   opacity: 1;
   border-radius: 8px;
   border-width: 0px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
   color: var(--color-bg);
+  cursor: pointer;
+}
+
+.orderButton:disabled {
+  background: var(--color-gray-light);
+  cursor: not-allowed;
 }

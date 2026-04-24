@@ -14,13 +14,13 @@ function BookPage() {
       <Sidebar />
       <main className={styles.main}>
         <Header/>
-        <BreadCrumbs />
+        <BreadCrumbs pointSelected={!!selectedPoint} />
         <div className={styles.orderContainer}>
-          <OrderPointForm onPointSelect={setSelectedPoint}/>
+          <OrderPointForm onPointSelect={setSelectedPoint} onPointClear={() => setSelectedPoint(null)}/>
           <div className={styles.orderSideContainer}>
             <div className={styles.orderConfirm}>
               <h3 className={styles.orderTitle}>Ваш заказ:</h3>
-              <p className={styles.orderPoint}>
+              <p className={selectedPoint ? styles.orderPoint : styles.orderPointInactive}>
                 <span className={styles.orderPointText}>
                   Пункт выдачи
                 </span> 
@@ -29,8 +29,8 @@ function BookPage() {
                   {selectedPoint?.name}
                 </span>
               </p>
-              <p className={styles.orderTotal}>Цена: <span className={styles.orderPrice}>8 000 до 12 000 ₽</span></p>
-              <button type='button' className={styles.orderButton}>Выбрать модель</button>
+              {/* <p className={styles.orderTotal}>Цена: <span className={styles.orderPrice}>8 000 до 12 000 ₽</span></p> */}
+              <button type='button' className={styles.orderButton} disabled={!selectedPoint}> Выбрать модель</button>
             </div>
           </div>
         </div>

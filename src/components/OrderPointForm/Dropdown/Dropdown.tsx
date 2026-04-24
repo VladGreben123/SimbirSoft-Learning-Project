@@ -54,7 +54,9 @@ function Dropdown({
           value={value}
           placeholder={placeholder}
           onChange={(e) => {
-            onChange(e.target.value);
+            const val = e.target.value;
+            if (val.length > 150 || (val.length > 0 && val.trim() === "")) return;
+            onChange(val);
             setIsOpen(true);
           }}
           onFocus={() => setIsOpen(true)}

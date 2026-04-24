@@ -2,7 +2,11 @@ import styles from './BreadCrumbs.module.css'
 import Arrow from '../../assets/Icons/arrow.svg?react'
 import { useLocation } from 'react-router-dom'
 
-function BreadCrumbs() {
+type Props = {
+    pointSelected: boolean;
+}
+
+function BreadCrumbs({ pointSelected }: Props) {
     const breadCrumbsLinks = [
         {link:"/book/place",content: 'Местоположение'},
         {link:"/book/model",content: 'Модель'},
@@ -16,9 +20,10 @@ function BreadCrumbs() {
             {breadCrumbsLinks.map((item, index) => (
                 <>
                     <a
-                      key = {item.link}
-                      href={item.link}
+                      key={item.link}
+                      href={pointSelected ? item.link : undefined}
                       className={location.pathname == item.link ? styles.active : styles.passive}
+                      aria-disabled={!pointSelected}
                     >
                       {item.content}
                     </a>
