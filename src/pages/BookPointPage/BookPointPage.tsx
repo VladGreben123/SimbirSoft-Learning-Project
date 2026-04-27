@@ -17,7 +17,7 @@ function BookPage() {
         <BreadCrumbs pointSelected={!!point} />
         <main className={styles.main}>
           <div className={styles.orderContainer}>
-            <OrderPointForm onPointSelect={setPoint} onPointClear={() => setPoint(null)}/>
+            <OrderPointForm onPointSelect={setPoint} onPointClear={() => setPoint(null)} initialPoint={point}/>
             <OrderSideInfo/>
           </div>
         </main>

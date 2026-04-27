@@ -1,10 +1,19 @@
 import styles from './OrderSideInfo.module.css'
 import { useBooking } from '../../context/BookingContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+const pageConfig: Record<string, { link: string; content: string; disabled: (point: unknown, model: unknown) => boolean }> = {
+    '/book/point':      { link: '/book/model',      content: 'Выбрать модель',  disabled: (point) => !point },
+    '/book/model':      { link: '/book/additional', content: 'Дополнительно',   disabled: (_, model) => !model },
+    '/book/additional': { link: '/book/total',      content: 'Итого',           disabled: (_, additional) => !additional },
+}
 
 function OrderSideInfo() {
-    const {model, point} = useBooking()
+    const { model, point } = useBooking()
+    const location = useLocation()
 
+    const config = pageConfig[location.pathname]
+    const isDisabled = config.disabled(point, model)
 
     return(
     <div className={styles.orderSideContainer}>
@@ -20,15 +29,23 @@ function OrderSideInfo() {
             </span>
         </p>
         <p className={model ? styles.orderModel : styles.orderModelInactive}>
+            <span className={styles.orderPointText}>
+            Модель
+            </span>
+            ............................................
+            <span className={styles.orderPointName}>
             {model?.name}
+            </span>
         </p>
-        <button type='button' className={styles.orderButton} disabled={!point}>
-            <Link to='/book/model' className={styles.orderButtonLink}>Выбрать модель</Link>
+        <button type='button' className={styles.orderButton} disabled={isDisabled}>
+            <Link to={config.link} className={styles.orderButtonLink}>
+              {config.content}
+            </Link>
         </button>
         </div>
     </div>
     )
-    
+
 }
 
 export default OrderSideInfo

@@ -9,12 +9,19 @@ import 'leaflet/dist/leaflet.css'
 type Props = {
   onPointSelect: (point: Point) => void;
   onPointClear: () => void;
+  initialPoint?: Point | null;
 };
 
-function OrderPointForm({ onPointSelect, onPointClear }: Props) {
-  const [cityValue, setCityValue] = useState("");
-  const [pointValue, setPointValue] = useState("");
-  const [mapPosition, setMapPosition] = useState([0,0]);
+function OrderPointForm({ onPointSelect, onPointClear, initialPoint }: Props) {
+  const [cityValue, setCityValue] = useState(() => {
+    if (!initialPoint) return "";
+    return formData.find((c: City) => c.points.some(p => p.name === initialPoint.name))?.name ?? "";
+  });
+  const [pointValue, setPointValue] = useState(initialPoint?.name ?? "");
+  const [mapPosition, setMapPosition] = useState(() => {
+    if (!initialPoint) return [0, 0];
+    return formData.find((c: City) => c.points.some(p => p.name === initialPoint.name))?.position ?? [0, 0];
+  });
 
   const cityOptions = formData.map((c: City) => c.name);
   const selectedCity = formData.find((c: City) => c.name === cityValue);

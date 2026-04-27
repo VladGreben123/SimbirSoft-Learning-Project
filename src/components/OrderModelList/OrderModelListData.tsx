@@ -28,7 +28,7 @@ const ModelData : Model[] = [
     },
     {
         id: 4,
-        name: 'ELANTRA',
+        name: 'i30 N',
         class: 'Эконом',
         minPrice: '10 000',
         maxPrice: '25 000',
@@ -57,7 +57,31 @@ const ModelData : Model[] = [
         minPrice: '10 000',
         maxPrice: '25 000',
         image: carImage
-    }
+    },
+    {
+        id: 8,
+        name: 'i30 N',
+        class: 'Эконом',
+        minPrice: '10 000',
+        maxPrice: '25 000',
+        image: carImage
+    },
+    {
+        id: 9,
+        name: 'ELANTRA',
+        class: 'Эконом',
+        minPrice: '10 000',
+        maxPrice: '25 000',
+        image: carImage
+    },
+    {
+        id: 10,
+        name: 'ELANTRA',
+        class: 'Эконом',
+        minPrice: '10 000',
+        maxPrice: '25 000',
+        image: carImage
+    },
 ]
 
 export default ModelData
