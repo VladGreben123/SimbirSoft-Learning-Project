@@ -37,6 +37,9 @@ function OrderSideInfo() {
             {model?.name}
             </span>
         </p>
+        <p className={model?.minPrice ? styles.orderPrice : styles.hiden}>
+            <span className={styles.priceHead}>Цена:</span>{`от ${model?.minPrice} до ${model?.maxPrice} ₽`}
+        </p>
         <button type='button' className={styles.orderButton} disabled={isDisabled}>
             <Link to={config.link} className={styles.orderButtonLink}>
               {config.content}

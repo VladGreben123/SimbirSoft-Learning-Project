@@ -80,6 +80,24 @@
   color: var(--color-bg);
 }
 
+.orderPrice{
+    margin-top: 32px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.priceHead{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0%;
+
+}
+
+.hiden{
+    display: none;
+}
+
 @media (width <= 768px) {
   .orderSideContainer {
     padding-left: 0;
