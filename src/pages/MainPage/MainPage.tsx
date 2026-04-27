@@ -17,7 +17,7 @@ function MainPage() {
               Поминутная аренда авто твоего города
             </p>
             <button type="button" className={styles.button}>
-              <a href="/book/place" className={styles.bookButton}>Забронировать</a>
+              <a href="/book/point" className={styles.bookButton}>Забронировать</a>
             </button>
           </div>
           <div className={styles["image-panel"]}>

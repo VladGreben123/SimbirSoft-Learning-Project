@@ -16,3 +16,12 @@ export type City = {
   position: [number,number];
   points: Point[];
 }
+
+export type Model = {
+  id: number;
+  name: string;
+  class: string;
+  minPrice: string;
+  maxPrice: string;
+  image: string;
+}

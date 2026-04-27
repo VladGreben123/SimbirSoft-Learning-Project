@@ -70,6 +70,10 @@
 }
 
 .bookButton{
+  display: block;
+  width: 250px;
+  height: 48px;
+  line-height: 48px;
   text-decoration: none;
   color: var(--color-bg);
 }

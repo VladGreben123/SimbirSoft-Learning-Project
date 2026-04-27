@@ -21,12 +21,12 @@ function BreadCrumbs({ pointSelected }: Props) {
                 {breadCrumbsLinks.map((item, index) => (
                     <>
                         <a
-                        key={item.link}
-                        href={pointSelected ? item.link : undefined}
-                        className={`${location.pathname == item.link ? styles.active : styles.passive} ${styles.breadCrumbsLink}`}
-                        aria-disabled={!pointSelected}
+                          key={item.link}
+                          href={pointSelected ? item.link : undefined}
+                          className={`${location.pathname == item.link ? styles.active : styles.passive} ${styles.breadCrumbsLink}`}
+                          aria-disabled={!pointSelected}
                         >
-                        {item.content}
+                          {item.content}
                         </a>
                         {index < breadCrumbsLinks.length - 1 && <Arrow/>}
                     </>

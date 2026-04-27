@@ -1,0 +1,78 @@
+.modelContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 1fr;
+}
+
+.modelFilter{
+    height: 16px;
+    align-self: center;
+}
+
+.modelFilterForm{
+    display: flex;
+    gap: 8px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: var(--color-black);
+}
+
+.modelFilterItem{
+    display: flex;
+    gap:8px;
+    align-items: center;
+
+}
+
+.modelListContainer{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 736px;
+}
+
+.model{
+    position: relative;
+    padding: 16px;
+    width: 368px;
+    height: 224px;
+    border: 1px solid var(--color-gray-light);
+    cursor: pointer;
+}
+
+.model:hover{
+    border: 1px solid var(--color-gray)
+}
+
+.activeModel{
+    border: 1px solid var(--color-main-accent)
+}
+
+.hiden{
+    display: none;
+}
+
+.modelName{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.modelPrice{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: var(--color-gray);
+}
+
+.modelImage{
+    position:absolute;
+    right:16px;
+    bottom: 16px;
+}
