@@ -25,7 +25,9 @@
   justify-self: center;
   display: grid;
   grid-template-columns: 1fr 320px;
-  grid-template-rows:1fr;
+  grid-template-rows: 1fr;
+  min-height: 0;
+  overflow: hidden;
 }
 
 @media (width <= 1024px) {
@@ -62,5 +64,6 @@
   .orderContainer {
     padding: 0 16px;
     overflow-y: auto;
+    grid-template-rows: 288px 1fr;
   }
 }

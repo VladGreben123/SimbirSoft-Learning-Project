@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80px 1fr;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .modelFilter{
@@ -33,11 +36,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: 100%;
   width: 100%;
   max-width: 736px;
-  overflow-y: auto;
-  
+  min-height: 0;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.modelListContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .model{
@@ -53,7 +60,7 @@
     border: 1px solid var(--color-gray)
 }
 
-.activeModel{
+.activeModel, .activeModel:hover{
     border: 1px solid var(--color-main-accent)
 }
 

@@ -15,7 +15,7 @@ type Props = {
 }
 
 function OrderModelList( {onModelSelect, activeModel} : Props) {
-    const [filter, setFilter] = useState('');
+    const [filter, setFilter] = useState('Все модели');
 
     const ModelFilter = useCallback((model : Model) => {
         let style : string = styles.model
@@ -38,10 +38,11 @@ function OrderModelList( {onModelSelect, activeModel} : Props) {
             <form className={styles.modelFilterForm}>
               {filterList.map((item) => (
                 <div key = {item.name} className={styles.modelFilterItem}>
-                    <input 
-                      id = {item.name} 
+                    <input
+                      id = {item.name}
                       type="radio"
                       name = "modelFilter"
+                      checked={filter === item.name}
                       onChange={handleFilterSelect(item.name)}
                     />
                     <label htmlFor={item.name}>{item.name}</label>

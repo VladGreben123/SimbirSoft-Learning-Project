@@ -110,6 +110,10 @@
   .orderButton {
     width: 100%;
   }
+
+  .orderButtonLink{
+    width: 100%;
+  }
 }
 
 @media (width <= 480px) {
@@ -120,12 +124,18 @@
   .orderSideContainer {
     padding-top: 16px;
     padding-bottom: 24px;
+    grid-row: 1;
   }
 
   .orderButton {
     width: 100%;
     font-size: 16px;
     height: 40px;
+  }
+
+  .orderButtonLink{
+    height: 40px;
+    line-height: 40px
   }
 
   .orderTitle {

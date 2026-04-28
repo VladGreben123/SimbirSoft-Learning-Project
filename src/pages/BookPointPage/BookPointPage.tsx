@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from './BookPointPage.module.css';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Header from '../../components/Header/Header';
@@ -7,7 +8,11 @@ import OrderSideInfo from '../../components/OrderSideInfo/OrderSideInfo';
 import { useBooking } from '../../context/BookingContext';
 
 function BookPage() {
-  const { point, setPoint } = useBooking()
+  const { point, setPoint, clearFrom } = useBooking()
+
+  useEffect(() => {
+    clearFrom('/book/point')
+  }, [])
 
   return (
     <>

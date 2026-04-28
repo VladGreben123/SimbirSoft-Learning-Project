@@ -1,6 +1,6 @@
 import styles from './OrderSideInfo.module.css'
 import { useBooking } from '../../context/BookingContext';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const pageConfig: Record<string, { link: string; content: string; disabled: (point: unknown, model: unknown) => boolean }> = {
     '/book/point':      { link: '/book/model',      content: 'Выбрать модель',  disabled: (point) => !point },
@@ -11,6 +11,7 @@ const pageConfig: Record<string, { link: string; content: string; disabled: (poi
 function OrderSideInfo() {
     const { model, point } = useBooking()
     const location = useLocation()
+    const navigate = useNavigate()
 
     const config = pageConfig[location.pathname]
     const isDisabled = config.disabled(point, model)
@@ -40,10 +41,13 @@ function OrderSideInfo() {
         <p className={model?.minPrice ? styles.orderPrice : styles.hiden}>
             <span className={styles.priceHead}>Цена:</span>{`от ${model?.minPrice} до ${model?.maxPrice} ₽`}
         </p>
-        <button type='button' className={styles.orderButton} disabled={isDisabled}>
-            <Link to={config.link} className={styles.orderButtonLink}>
-              {config.content}
-            </Link>
+        <button
+          type='button'
+          className={styles.orderButton}
+          disabled={isDisabled}
+          onClick={() => navigate(config.link)}
+        >
+          <span>{config.content}</span>
         </button>
         </div>
     </div>
