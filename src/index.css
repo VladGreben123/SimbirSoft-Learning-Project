@@ -30,7 +30,7 @@ button > * {
 }
 
 button::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -40,13 +40,13 @@ button::after {
 }
 
 button:hover::after {
-  background: rgba(0, 0, 0, 0.10);
+  background: rgb(0 0 0 / 10%);
 }
 
 button:active::after {
-  background: rgba(0, 0, 0, 0.20);
+  background: rgb(0 0 0 / 20%);
 }
 
 button:focus-visible::after {
-  background: rgba(0, 0, 0, 0.10);
+  background: rgb(0 0 0 / 10%);
 }

@@ -54,9 +54,9 @@ function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
             <ul className={styles.socials}>
               {socialsIcons.map(({ icon: Icon, name, href }) => (
                 <li key={name}>
-                  <a 
-                    href={href} 
-                    target="_blank" 
+                  <a
+                    href={href}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={styles.socialLink}
                   >

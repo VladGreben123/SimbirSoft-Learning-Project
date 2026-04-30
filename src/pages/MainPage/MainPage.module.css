@@ -65,11 +65,11 @@
   color: var(--color-bg);
 }
 
-.button:hover{
-  filter: (0.9);
+.button:hover {
+  filter: brightness(0.9);
 }
 
-.bookButton{
+.bookButton {
   display: block;
   width: 250px;
   height: 48px;

@@ -45,7 +45,7 @@
   font-size: 32px;
   color: var(--color-bg);
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
 .menu-link {

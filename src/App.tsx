@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { BookingProvider } from './context/BookingContext'
+import { BookingProvider } from "./context/BookingContext";
 import routes from "./routes";
 
 function App() {

@@ -1,44 +1,43 @@
-.modelContainer{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr;
-    height: 100%;
-    min-height: 0;
-    overflow: hidden;
+.modelContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
 }
 
-.modelFilter{
-    height: 16px;
-    align-self: center;
+.modelFilter {
+  height: 16px;
+  align-self: center;
 }
 
-.modelFilterForm{
-    display: flex;
-    gap: 8px;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0%;
-    color: var(--color-black);
+.modelFilterForm {
+  display: flex;
+  gap: 8px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: var(--color-black);
 }
 
-.modelFilterItem{
-    display: flex;
-    gap:8px;
-    align-items: center;
-
+.modelFilterItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
-.modelListContainer{
+.modelListContainer {
   margin-top: 16px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 100%;
   max-width: 736px;
   min-height: 0;
+  max-height: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -47,44 +46,46 @@
   display: none;
 }
 
-.model{
-    position: relative;
-    padding: 16px;
-    width: 368px;
-    height: 224px;
-    border: 1px solid var(--color-gray-light);
-    cursor: pointer;
+.model {
+  display: grid;
+  grid-template-rows: 20px 20px 1fr;
+  position: relative;
+  padding: 16px;
+  width: 368px;
+  height: 224px;
+  border: 1px solid var(--color-gray-light);
+  cursor: pointer;
 }
 
-.model:hover{
-    border: 1px solid var(--color-gray)
+.model:hover {
+  border: 1px solid var(--color-gray);
 }
 
-.activeModel, .activeModel:hover{
-    border: 1px solid var(--color-main-accent)
+.activeModel,
+.activeModel:hover {
+  border: 1px solid var(--color-main-accent);
 }
 
-.hiden{
-    display: none;
+.hiden {
+  display: none;
 }
 
-.modelName{
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+.modelName {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: normal;
 }
 
-.modelPrice{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: var(--color-gray);
+.modelPrice {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: normal;
+  color: var(--color-gray);
 }
 
-.modelImage{
-    position:absolute;
-    right:16px;
-    bottom: 16px;
+.modelImage {
+  justify-self: end;
+  align-self: flex-end;
 }

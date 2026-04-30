@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.headerContent{
+.headerContent {
   display: grid;
   grid-template-columns: 1fr;
   justify-self: center;
@@ -44,7 +44,6 @@
   }
 }
 
-
 @media (width <= 768px) {
   .logo {
     grid-column: 1;
@@ -70,8 +69,8 @@
     margin-right: 16px;
     margin-top: 16px;
   }
-  
-  .headerContent{
+
+  .headerContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
@@ -82,7 +81,7 @@
     padding: 0;
     font-weight: 700;
     font-size: 30px;
-    letter-spacing: 0%;
+    letter-spacing: normal;
   }
 
   .map {
@@ -91,5 +90,3 @@
     padding: 0;
   }
 }
-
-

@@ -65,7 +65,11 @@ function Slider() {
             };
             return (
               <li key={i}>
-                <button type="button" onClick={dotOnClick} className={styles.sliderNavButton}>
+                <button
+                  type="button"
+                  onClick={dotOnClick}
+                  className={styles.sliderNavButton}
+                >
                   <Dot className={dotClass} />
                 </button>
               </li>

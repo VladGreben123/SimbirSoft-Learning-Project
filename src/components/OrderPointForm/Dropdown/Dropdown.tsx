@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import styles from "./Dropdown.module.css";
 import Close from "../../../assets/Icons/eraseForm.svg?react";
 
@@ -30,6 +30,16 @@ function Dropdown({
     o.toLowerCase().includes(value.toLowerCase()),
   );
 
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const val = e.target.value;
+      if (val.length > 150 || (val.length > 0 && val.trim() === "")) return;
+      onChange(val);
+      setIsOpen(true);
+    },
+    [onChange],
+  );
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (
@@ -54,12 +64,7 @@ function Dropdown({
           value={value}
           placeholder={placeholder}
           className={styles.input}
-          onChange={(e) => {
-            const val = e.target.value;
-            if (val.length > 150 || (val.length > 0 && val.trim() === "")) return;
-            onChange(val);
-            setIsOpen(true);
-          }}
+          onChange={handleChange}
           onFocus={() => setIsOpen(true)}
           autoComplete="off"
         />

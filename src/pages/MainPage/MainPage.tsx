@@ -1,6 +1,6 @@
 import styles from "./MainPage.module.css";
 import Slider from "../../components/Slider/Slider";
-import Header from "../../components/Header/Header"
+import Header from "../../components/Header/Header";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
 function MainPage() {
@@ -8,7 +8,7 @@ function MainPage() {
     <>
       <Sidebar />
       <div className={styles.pageWrapper}>
-        <Header/>
+        <Header />
         <main className={styles.main}>
           <div className={styles["hero-block"]}>
             <h2 className={styles["hero-main"]}>Каршеринг</h2>
@@ -17,7 +17,9 @@ function MainPage() {
               Поминутная аренда авто твоего города
             </p>
             <button type="button" className={styles.button}>
-              <a href="/book/point" className={styles.bookButton}>Забронировать</a>
+              <a href="/book/point" className={styles.bookButton}>
+                Забронировать
+              </a>
             </button>
           </div>
           <div className={styles["image-panel"]}>

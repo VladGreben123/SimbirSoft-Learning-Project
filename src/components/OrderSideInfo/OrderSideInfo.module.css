@@ -1,66 +1,66 @@
-.orderSideContainer{
-  padding-left:32px;
+.orderSideContainer {
+  padding-left: 32px;
   border-left: 1px solid var(--color-gray-light);
 }
 
-.orderConfirm{
+.orderConfirm {
   height: 192px;
 }
 
-.orderTitle{
+.orderTitle {
   margin-top: 32px;
   justify-self: end;
 }
 
-.orderPoint{
+.orderPoint {
   display: flex;
   gap: 8px;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   justify-self: start;
   margin-top: 32px;
   color: var(--color-gray);
 }
 
-.orderPointInactive{
+.orderPointInactive {
   display: none;
 }
 
-.orderPointText{
+.orderPointText {
   color: var(--color-black);
 }
 
-.orderModel{
+.orderModel {
   display: flex;
   gap: 8px;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   justify-self: start;
   margin-top: 32px;
   color: var(--color-gray);
 }
 
-.orderModelInactive{
+.orderModelInactive {
   display: none;
 }
 
-.orderButton{
+.orderButton {
   margin-top: 32px;
-  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+  background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
   background-blend-mode: darken;
   width: 287px;
   height: 48px;
   opacity: 1;
   border-radius: 8px;
-  border-width: 0px;
+  border-width: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   text-align: center;
   color: var(--color-bg);
   cursor: pointer;
@@ -71,7 +71,7 @@
   cursor: not-allowed;
 }
 
-.orderButtonLink{
+.orderButtonLink {
   display: block;
   width: 287px;
   height: 48px;
@@ -80,22 +80,21 @@
   color: var(--color-bg);
 }
 
-.orderPrice{
-    margin-top: 32px;
-    font-size: 16px;
-    line-height: 16px;
+.orderPrice {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 16px;
 }
 
-.priceHead{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    letter-spacing: 0%;
-
+.priceHead {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: normal;
 }
 
-.hiden{
-    display: none;
+.hiden {
+  display: none;
 }
 
 @media (width <= 768px) {
@@ -111,7 +110,7 @@
     width: 100%;
   }
 
-  .orderButtonLink{
+  .orderButtonLink {
     width: 100%;
   }
 }
@@ -133,9 +132,9 @@
     height: 40px;
   }
 
-  .orderButtonLink{
+  .orderButtonLink {
     height: 40px;
-    line-height: 40px
+    line-height: 40px;
   }
 
   .orderTitle {

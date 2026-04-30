@@ -3,17 +3,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 736px;
-  max-width: 100%;
+  max-width: 736px;
+  width: 100%;
   gap: 16px;
 }
 
-.cityLabel, .pointLabel {
+.cityLabel,
+.pointLabel {
   justify-self: left;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
 .cityLabel {
@@ -24,17 +25,17 @@
   padding-right: 5px;
 }
 
-.mapTitle{
+.mapTitle {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   margin-top: 32px;
   width: 100%;
   justify-self: start;
 }
 
-.formInputs{
+.formInputs {
   gap: 16px;
   width: 320px;
   display: flex;
@@ -42,14 +43,14 @@
   align-items: flex-end;
 }
 
-.map{
-  width: 736px;
+.map {
+  width: 100%;
   max-width: 100%;
   height: 352px;
   overflow: hidden;
 }
 
-.mapContainer{
+.mapContainer {
   width: 100%;
   height: 400px;
 }
@@ -62,10 +63,10 @@
   font-size: 14px;
 }
 
-.mapPopUpButton{
-  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+.mapPopUpButton {
+  background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
   background-blend-mode: darken;
-  border-width: 0px;
+  border-width: 0;
   color: var(--color-bg);
   padding: 4px;
   margin-top: 3px;
@@ -104,11 +105,13 @@
     width: 100%;
     align-items: flex-end;
   }
-  .mapTitle{
+
+  .mapTitle {
     margin-top: 8px;
   }
-  .pointLabel{
+
+  .pointLabel {
     text-align: end;
-    padding-right:8px;
+    padding-right: 8px;
   }
 }

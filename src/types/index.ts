@@ -9,13 +9,13 @@ export interface Slide {
 export type Point = {
   name: string;
   position: [number, number];
-}
+};
 
 export type City = {
   name: string;
-  position: [number,number];
+  position: [number, number];
   points: Point[];
-}
+};
 
 export type Model = {
   id: number;
@@ -24,4 +24,4 @@ export type Model = {
   minPrice: string;
   maxPrice: string;
   image: string;
-}
+};
