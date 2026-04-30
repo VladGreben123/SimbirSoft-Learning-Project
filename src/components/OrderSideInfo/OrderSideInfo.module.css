@@ -12,7 +12,7 @@
   justify-self: end;
 }
 
-.orderPoint {
+.orderInfo {
   display: flex;
   gap: 8px;
   font-weight: 300;
@@ -24,28 +24,8 @@
   color: var(--color-gray);
 }
 
-.orderPointInactive {
-  display: none;
-}
-
-.orderPointText {
+.orderInfoName {
   color: var(--color-black);
-}
-
-.orderModel {
-  display: flex;
-  gap: 8px;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: normal;
-  justify-self: start;
-  margin-top: 32px;
-  color: var(--color-gray);
-}
-
-.orderModelInactive {
-  display: none;
 }
 
 .orderButton {

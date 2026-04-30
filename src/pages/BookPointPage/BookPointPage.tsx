@@ -8,7 +8,7 @@ import OrderSideInfo from "../../components/OrderSideInfo/OrderSideInfo";
 import { useBooking } from "../../context/BookingContext";
 
 function BookPage() {
-  const { point, setPoint, clearFrom } = useBooking();
+  const { point, model, additional, setPoint, clearFrom } = useBooking();
 
   useEffect(() => {
     clearFrom("/book/point");
@@ -19,7 +19,11 @@ function BookPage() {
       <Sidebar />
       <div className={styles.pageWrapper}>
         <Header />
-        <BreadCrumbs pointSelected={!!point} />
+        <BreadCrumbs
+          pointSelected={!!point}
+          modelSelected={!!model}
+          additionalSelected={!!additional}
+        />
         <main className={styles.main}>
           <div className={styles.orderContainer}>
             <OrderPointForm

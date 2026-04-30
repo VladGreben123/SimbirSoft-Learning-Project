@@ -24,4 +24,13 @@ export type Model = {
   minPrice: string;
   maxPrice: string;
   image: string;
+  color: string[];
+};
+
+export type Additional = {
+  color: string;
+  dateRange: string;
+  rate: number;
+  extras: string[];
+  total: number;
 };

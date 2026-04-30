@@ -5,13 +5,27 @@ import { useBooking } from "../../context/BookingContext";
 
 type Props = {
   pointSelected: boolean;
+  modelSelected: boolean;
+  additionalSelected: boolean;
 };
 
-function BreadCrumbs({ pointSelected }: Props) {
+function BreadCrumbs({
+  pointSelected,
+  modelSelected,
+  additionalSelected,
+}: Props) {
   const breadCrumbsLinks = [
-    { link: "/book/point", content: "Местоположение" },
-    { link: "/book/model", content: "Модель" },
-    { link: "/book/additional", content: "Дополнительно" },
+    { link: "/book/point", content: "Местоположение", visited: pointSelected },
+    {
+      link: "/book/model",
+      content: "Модель",
+      visited: pointSelected && modelSelected,
+    },
+    {
+      link: "/book/additional",
+      content: "Дополнительно",
+      visited: pointSelected && modelSelected && additionalSelected,
+    },
     { link: "/book/total", content: "Итого" },
   ];
   const location = useLocation();
@@ -25,10 +39,14 @@ function BreadCrumbs({ pointSelected }: Props) {
             <Link
               key={item.link}
               to={pointSelected ? item.link : location.pathname}
-              className={`${location.pathname === item.link ? styles.active : styles.passive} ${styles.breadCrumbsLink}`}
-              aria-disabled={!pointSelected}
+              className={`${
+                location.pathname === item.link ? styles.active : styles.passive
+              } 
+                 ${styles.breadCrumbsLink}
+                 ${item.visited && location.pathname !== item.link ? styles.visited : ""}`}
+              aria-disabled={item.visited}
               onClick={() => {
-                if (pointSelected) clearFrom(item.link);
+                if (item.visited) clearFrom(item.link);
               }}
             >
               {item.content}

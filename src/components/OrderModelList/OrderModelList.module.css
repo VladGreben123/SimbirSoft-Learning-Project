@@ -86,6 +86,5 @@
 }
 
 .modelImage {
-  justify-self: end;
-  align-self: flex-end;
+  place-self: flex-end end;
 }

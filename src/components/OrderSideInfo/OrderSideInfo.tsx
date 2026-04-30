@@ -28,7 +28,7 @@ const pageConfig: Record<
 };
 
 function OrderSideInfo() {
-  const { model, point } = useBooking();
+  const { model, point, additional } = useBooking();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -39,16 +39,23 @@ function OrderSideInfo() {
     <div className={styles.orderSideContainer}>
       <div className={styles.orderConfirm}>
         <h3 className={styles.orderTitle}>Ваш заказ:</h3>
-        <p className={point ? styles.orderPoint : styles.orderPointInactive}>
-          <span className={styles.orderPointText}>Пункт выдачи</span>
+        <p className={point ? styles.orderInfo : styles.hiden}>
+          <span className={styles.orderInfoName}>Пункт выдачи</span>
           ......................
-          <span className={styles.orderPointName}>{point?.name}</span>
+          <span>{point?.name}</span>
         </p>
-        <p className={model ? styles.orderModel : styles.orderModelInactive}>
-          <span className={styles.orderPointText}>Модель</span>
+        <p className={model ? styles.orderInfo : styles.hiden}>
+          <span className={styles.orderInfoName}>Модель</span>
           ............................................
-          <span className={styles.orderPointName}>{model?.name}</span>
+          <span>{model?.name}</span>
         </p>
+        <div className={additional ? styles.orderInfo : styles.hiden}>
+          <p className={styles.color}>
+            <span className={styles.orderInfoName}>Цвет</span>
+            ............................................
+            <span>{additional?.color}</span>
+          </p>
+        </div>
         <p className={model?.minPrice ? styles.orderPrice : styles.hiden}>
           <span className={styles.priceHead}>Цена:</span>
           {`от ${model?.minPrice} до ${model?.maxPrice} ₽`}

@@ -26,6 +26,10 @@
   color: var(--color-main-accent);
 }
 
+.visited {
+  color: var(--color-black);
+}
+
 @media (width <= 1440px) {
   .breadCrumbsContainer {
     padding: 0 64px;
