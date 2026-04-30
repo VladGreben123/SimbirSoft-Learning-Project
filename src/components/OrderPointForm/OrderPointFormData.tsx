@@ -13,7 +13,7 @@ const formData: City[] = [
     name: "Москва",
     position: [55.7558, 37.6173],
     points: [
-      { name: "Арбат", position: [55.7520, 37.5921] },
+      { name: "Арбат", position: [55.752, 37.5921] },
       { name: "Сокольники", position: [55.7889, 37.6785] },
     ],
   },

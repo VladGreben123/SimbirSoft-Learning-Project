@@ -1,9 +1,11 @@
 import MainPage from "./pages/MainPage/MainPage";
-import BookPage from "./pages/BookPage/BookPage";
+import BookPointPage from "./pages/BookPointPage/BookPointPage";
+import BookModelPage from "./pages/BookModelPage/BookModelPage";
 
 const routes = [
-    { path: "/", element: <MainPage /> },
-    { path: "/book/place", element: <BookPage /> }
+  { path: "/", element: <MainPage /> },
+  { path: "/book/point", element: <BookPointPage /> },
+  { path: "/book/model", element: <BookModelPage /> },
 ];
 
 export default routes;

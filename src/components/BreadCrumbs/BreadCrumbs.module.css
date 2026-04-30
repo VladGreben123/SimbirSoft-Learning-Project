@@ -1,20 +1,50 @@
-.breadCrumbs{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: calc((100% - 1248px) / 2);
-    height: 32px;
-    gap:16px;
-    width: 100dvw;
-    border-top: 1px solid var(--color-gray-light);
-    border-bottom: 1px solid var(--color-gray-light);
+.breadCrumbsContainer {
+  width: 100%;
+  border-top: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-gray-light);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.breadCrumbs a{
-    text-decoration: none;
-    color: var(--color-gray);
+.breadCrumbs {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1248px;
 }
 
-.breadCrumbs .active{
-    color: var(--color-main-accent);
+.breadCrumbsLink {
+  text-decoration: none;
+  color: var(--color-gray);
+}
+
+.active {
+  color: var(--color-main-accent);
+}
+
+@media (width <= 1440px) {
+  .breadCrumbsContainer {
+    padding: 0 64px;
+  }
+}
+
+@media (width <= 1024px) {
+  .breadCrumbsContainer {
+    padding: 0 32px;
+  }
+}
+
+@media (width <= 480px) {
+  .breadCrumbs {
+    height: 64px;
+    gap: 8px;
+  }
+
+  .breadCrumbsContainer {
+    padding: 0 16px;
+  }
 }

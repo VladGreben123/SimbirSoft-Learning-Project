@@ -3,48 +3,39 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 736px;
+  max-width: 736px;
+  width: 100%;
   gap: 16px;
 }
 
-.formContainer label {
+.cityLabel,
+.pointLabel {
   justify-self: left;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
-.formContainer .cityLabel {
+.cityLabel {
   padding-right: 8px;
 }
 
-.formContainer .pointLabel {
+.pointLabel {
   padding-right: 5px;
 }
 
-.formContainer input {
+.mapTitle {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0%;
-  width: 224px;
-  padding-left: 8px;
-  border: 0;
-  border-bottom: 1px solid var(--color-gray);
-}
-
-.formContainer .mapTitle{
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: normal;
   margin-top: 32px;
   width: 100%;
   justify-self: start;
 }
 
-.formInputs{
+.formInputs {
   gap: 16px;
   width: 320px;
   display: flex;
@@ -52,13 +43,14 @@
   align-items: flex-end;
 }
 
-.map{
-  width: 736px;
+.map {
+  width: 100%;
+  max-width: 100%;
   height: 352px;
   overflow: hidden;
 }
 
-.mapContainer{
+.mapContainer {
   width: 100%;
   height: 400px;
 }
@@ -71,11 +63,55 @@
   font-size: 14px;
 }
 
-.mapPopUpButton{
-  background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
+.mapPopUpButton {
+  background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
   background-blend-mode: darken;
-  border-width: 0px;
+  border-width: 0;
   color: var(--color-bg);
   padding: 4px;
   margin-top: 3px;
+}
+
+@media (width <= 1024px) {
+  .formContainer {
+    width: 100%;
+  }
+
+  .map {
+    width: calc(100% - 32px);
+    margin-right: 32px;
+  }
+}
+
+@media (width <= 768px) {
+  .map {
+    width: 100%;
+    margin-right: 0;
+    height: 250px;
+  }
+}
+
+@media (width <= 480px) {
+  .formContainer {
+    margin-top: 16px;
+  }
+
+  .map {
+    height: 200px;
+    margin-bottom: 16px;
+  }
+
+  .formInputs {
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  .mapTitle {
+    margin-top: 8px;
+  }
+
+  .pointLabel {
+    text-align: end;
+    padding-right: 8px;
+  }
 }

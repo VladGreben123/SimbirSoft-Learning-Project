@@ -18,3 +18,35 @@ body {
   font-family: Roboto, sans-serif;
   overflow-x: hidden;
 }
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button > * {
+  position: relative;
+  z-index: 1;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: transparent;
+  transition: background 0.15s;
+  pointer-events: none;
+}
+
+button:hover::after {
+  background: rgb(0 0 0 / 10%);
+}
+
+button:active::after {
+  background: rgb(0 0 0 / 20%);
+}
+
+button:focus-visible::after {
+  background: rgb(0 0 0 / 10%);
+}

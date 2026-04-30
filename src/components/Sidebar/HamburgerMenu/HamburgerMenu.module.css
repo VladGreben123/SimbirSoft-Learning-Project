@@ -45,7 +45,7 @@
   font-size: 32px;
   color: var(--color-bg);
   line-height: 100%;
-  letter-spacing: 0%;
+  letter-spacing: normal;
 }
 
 .menu-link {
@@ -57,7 +57,7 @@
   color: var(--color-main-accent);
 }
 
-.menu-list li {
+.menuItem {
   margin-bottom: 15px;
 }
 
@@ -68,7 +68,7 @@
   margin-top: 38px;
 }
 
-.socials a:hover path {
+.socialLink:hover path {
   fill: var(--color-main-accent);
 }
 
