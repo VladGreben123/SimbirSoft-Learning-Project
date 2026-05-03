@@ -41,24 +41,41 @@ function OrderSideInfo() {
         <h3 className={styles.orderTitle}>Ваш заказ:</h3>
         <p className={point ? styles.orderInfo : styles.hiden}>
           <span className={styles.orderInfoName}>Пункт выдачи</span>
-          ......................
-          <span>{point?.name}</span>
+          <span className={styles.dots} />
+          <span className={styles.orderValue}>{point?.name}</span>
         </p>
         <p className={model ? styles.orderInfo : styles.hiden}>
           <span className={styles.orderInfoName}>Модель</span>
-          ............................................
+          <span className={styles.dots} />
           <span>{model?.name}</span>
         </p>
-        <div className={additional ? styles.orderInfo : styles.hiden}>
-          <p className={styles.color}>
-            <span className={styles.orderInfoName}>Цвет</span>
-            ............................................
-            <span>{additional?.color}</span>
-          </p>
+        <p className={additional?.color ? styles.orderInfo : styles.hiden}>
+          <span className={styles.orderInfoName}>Цвет</span>
+          <span className={styles.dots} />
+          <span>{additional?.color}</span>
+        </p>
+        <p className={additional?.rate ? styles.orderInfo : styles.hiden}>
+          <span className={styles.orderInfoName}>Тариф</span>
+          <span className={styles.dots} />
+          <span>{additional?.rate?.name}</span>
+        </p>
+        <p className={additional?.dateRange ? styles.orderInfo : styles.hiden}>
+          <span className={styles.orderInfoName}>Длительность аренды</span>
+          <span className={styles.dots} />
+          <span>{additional?.dateRange}</span>
+        </p>
+        <div className={additional ? styles.additional : styles.hiden}>
+          {additional?.extras.map((item) => (
+            <p className={styles.orderInfo}>
+              <span className={styles.orderInfoName}>{item.name}</span>
+              <span className={styles.dots} />
+              <span>Да</span>
+            </p>
+          ))}
         </div>
         <p className={model?.minPrice ? styles.orderPrice : styles.hiden}>
           <span className={styles.priceHead}>Цена:</span>
-          {`от ${model?.minPrice} до ${model?.maxPrice} ₽`}
+          {` ${(additional?.total ?? 0).toLocaleString("ru-RU")} ₽`}
         </p>
         <button
           type="button"

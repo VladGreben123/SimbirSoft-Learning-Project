@@ -14,18 +14,33 @@
 
 .orderInfo {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
+  width: 100%;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: normal;
   justify-self: start;
-  margin-top: 32px;
+  margin-top: 16px;
   color: var(--color-gray);
+}
+
+.dots {
+  flex: 1;
+  height: 16px;
+  border-bottom: 2px dotted var(--color-gray);
+  width: 100%;
+  transform: translateY(-3px);
 }
 
 .orderInfoName {
   color: var(--color-black);
+}
+
+.additional {
+  display: flex;
+  flex-direction: column;
 }
 
 .orderButton {

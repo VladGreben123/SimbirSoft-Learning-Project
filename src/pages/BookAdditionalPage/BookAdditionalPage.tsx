@@ -4,6 +4,7 @@ import { useBooking } from "../../context/BookingContext";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
+import OrderAdditionalForm from "../../components/OrderAdditionalForm/OrderAdditionalForm";
 
 function BookModelPage() {
   const { point, model, additional } = useBooking();
@@ -20,7 +21,7 @@ function BookModelPage() {
         />
         <main className={styles.main}>
           <div className={styles.orderContainer}>
-            <div>Additional</div>
+            <OrderAdditionalForm />
             <OrderSideInfo />
           </div>
         </main>

@@ -27,10 +27,21 @@ export type Model = {
   color: string[];
 };
 
+export type Extra = {
+  name: string;
+  price: number;
+};
+
+export type Rate = {
+  name: string;
+  price: number;
+  time: string;
+};
+
 export type Additional = {
   color: string;
   dateRange: string;
-  rate: number;
-  extras: string[];
+  rate: Rate | null;
+  extras: Extra[];
   total: number;
 };
