@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { useCallback, useState } from "react";
 import styles from "./OrderSideInfo.module.css";
 import { useBooking } from "../../context/BookingContext";
+import type { Point, Model, Additional } from "../../types/index";
 
 const pageConfig: Record<
   string,
@@ -25,15 +27,47 @@ const pageConfig: Record<
     content: "Итого",
     disabled: (_, additional) => !additional,
   },
+  "/book/total": {
+    link: "/",
+    content: "Заказать",
+    disabled: () => false,
+  },
 };
 
 function OrderSideInfo() {
-  const { model, point, additional } = useBooking();
+  const { model, point, additional, order, setOrder } = useBooking();
   const location = useLocation();
   const navigate = useNavigate();
+  const [modal, setModal] = useState(false);
 
   const config = pageConfig[location.pathname];
   const isDisabled = config.disabled(point, model);
+
+  const handleNavigate = useCallback(
+    (link: string) =>
+      link === "/" ? () => setModal(true) : () => navigate(config.link),
+    [config, navigate],
+  );
+
+  const handleButtonConfirm = useCallback(
+    (
+      pointValue: Point | null,
+      modelValue: Model | null,
+      additionalValue: Additional | null,
+    ) =>
+      () => {
+        if (pointValue && modelValue && additionalValue) {
+          setOrder({
+            point: pointValue,
+            model: modelValue,
+            additional: additionalValue,
+            id: "RU58491823",
+          });
+          setModal(false);
+        }
+      },
+    [setOrder],
+  );
 
   return (
     <div className={styles.orderSideContainer}>
@@ -79,12 +113,35 @@ function OrderSideInfo() {
         </p>
         <button
           type="button"
-          className={styles.orderButton}
+          className={`${styles.orderButton} ${order ? styles.orderButtonReady : ""}`}
           disabled={isDisabled}
-          onClick={() => navigate(config.link)}
+          onClick={order ? () => setOrder(null) : handleNavigate(config.link)}
         >
-          <span>{config.content}</span>
+          <span>{order ? "Отменить" : config.content}</span>
         </button>
+        <div className={modal ? styles.modal : styles.hiden}>
+          <div className={styles.modalContent}>
+            <p className={styles.modalHead}>Подтвердить заказ</p>
+            <div className={styles.modalButtons}>
+              <button
+                type="button"
+                onClick={handleButtonConfirm(point, model, additional)}
+                className={`${styles.button} ${styles.buttonConfirm}`}
+              >
+                Подтвердить
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setModal(false);
+                }}
+                className={`${styles.button} ${styles.buttonDeny}`}
+              >
+                Вернуться
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

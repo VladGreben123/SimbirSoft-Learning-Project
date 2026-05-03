@@ -66,6 +66,10 @@
   cursor: not-allowed;
 }
 
+.orderButtonReady {
+  background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
+}
+
 .orderButtonLink {
   display: block;
   width: 287px;
@@ -86,6 +90,66 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: normal;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background: rgb(255 255 255 / 90%);
+  z-index: 10000000;
+}
+
+.modalContent {
+  padding: 24px;
+  width: 405px;
+  height: 157px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalHead {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.button {
+  width: 177px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--color-bg);
+}
+
+.buttonConfirm {
+  background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
+}
+
+.buttonDeny {
+  border-radius: 4px;
+  width: 164px;
+  background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
 }
 
 .hiden {

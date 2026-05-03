@@ -20,6 +20,8 @@ export type City = {
 export type Model = {
   id: number;
   name: string;
+  carNumber: string;
+  fuel: number;
   class: string;
   minPrice: string;
   maxPrice: string;
@@ -41,7 +43,15 @@ export type Rate = {
 export type Additional = {
   color: string;
   dateRange: string;
+  dateFrom: Date | null;
   rate: Rate | null;
   extras: Extra[];
   total: number;
+};
+
+export type Order = {
+  point: Point;
+  model: Model;
+  additional: Additional;
+  id: string;
 };

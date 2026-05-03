@@ -5,7 +5,11 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <h1 className={styles.logo}>Need for drive</h1>
+        <h1 className={styles.logo}>
+          <a href="/" className={styles.logoLink}>
+            Need for drive
+          </a>
+        </h1>
         <div className={styles.map}>
           <PlaceIcon />
           Ульяновск
