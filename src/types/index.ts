@@ -43,7 +43,7 @@ export type Rate = {
 export type Additional = {
   color: string;
   dateRange: string;
-  dateFrom: Date | null;
+  dateStart: Date | null;
   rate: Rate | null;
   extras: Extra[];
   total: number;

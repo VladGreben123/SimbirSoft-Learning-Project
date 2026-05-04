@@ -48,7 +48,7 @@ function BreadCrumbs({
           <>
             <Link
               key={item.link}
-              to={pointSelected ? item.link : location.pathname}
+              to={item.visited ? item.link : location.pathname}
               className={`${
                 location.pathname === item.link ? styles.active : styles.passive
               }

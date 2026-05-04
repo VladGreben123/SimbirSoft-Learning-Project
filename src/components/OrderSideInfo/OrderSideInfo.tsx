@@ -9,7 +9,7 @@ const pageConfig: Record<
   {
     link: string;
     content: string;
-    disabled: (point: unknown, model: unknown) => boolean;
+    disabled: (point: unknown, model: unknown, additional: unknown) => boolean;
   }
 > = {
   "/book/point": {
@@ -25,7 +25,10 @@ const pageConfig: Record<
   "/book/additional": {
     link: "/book/total",
     content: "Итого",
-    disabled: (_, additional) => !additional,
+    disabled: (_, __, additional) => {
+      const a = additional as Additional | null;
+      return !a || !a.color || !a.rate || !a.dateStart;
+    },
   },
   "/book/total": {
     link: "/",
@@ -41,7 +44,7 @@ function OrderSideInfo() {
   const [modal, setModal] = useState(false);
 
   const config = pageConfig[location.pathname];
-  const isDisabled = config.disabled(point, model);
+  const isDisabled = config.disabled(point, model, additional);
 
   const handleNavigate = useCallback(
     (link: string) =>
