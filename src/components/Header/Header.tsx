@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import PlaceIcon from "../../assets/Icons/place.svg?react";
 
@@ -6,9 +7,9 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.headerContent}>
         <h1 className={styles.logo}>
-          <a href="/" className={styles.logoLink}>
+          <Link to="/" className={styles.logoLink}>
             Need for drive
-          </a>
+          </Link>
         </h1>
         <div className={styles.map}>
           <PlaceIcon />
