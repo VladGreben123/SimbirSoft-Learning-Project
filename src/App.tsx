@@ -4,7 +4,7 @@ import routes from "./routes";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <BookingProvider>
         <Routes>
           {routes.map((route) => (

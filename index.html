@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>simbirsoft-learning-project</title>
+    <script>
+      // Decode the path injected by 404.html for SPA routing on GitHub Pages.
+      (function () {
+        if (window.location.search.indexOf("?/") === 0) {
+          var decoded = window.location.search
+            .slice(2)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            "",
+            window.location.pathname.replace(/\/$/, "") +
+              "/" +
+              decoded +
+              window.location.hash,
+          );
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

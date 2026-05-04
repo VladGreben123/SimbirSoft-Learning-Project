@@ -5,5 +5,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/SimbirSoft-Learning-Project/",
   plugins: [react(), svgr(), babel({ presets: [reactCompilerPreset()] })],
 });
