@@ -26,6 +26,11 @@
   color: #0ec261;
 }
 
+.logoLink {
+  text-decoration: none;
+  color: var(--color-main-accent);
+}
+
 .map {
   display: flex;
   align-items: center;

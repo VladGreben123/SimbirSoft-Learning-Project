@@ -1,0 +1,54 @@
+.orderAdditionalContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.additionalColorForm {
+  display: flex;
+}
+
+.dateForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.rateForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.extraForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formLabel {
+  margin-right: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: normal;
+  color: var(--color-gray);
+}
+
+.formLabelActive {
+  color: var(--color-black);
+}
+
+.form {
+  margin-top: 32px;
+}
+
+.formName {
+  margin-bottom: 16px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+
+.input {
+  margin-right: 8px;
+}

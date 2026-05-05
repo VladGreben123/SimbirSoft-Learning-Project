@@ -5,13 +5,17 @@ import {
   useMemo,
   useCallback,
 } from "react";
-import type { Point, Model } from "../types/index";
+import type { Point, Model, Additional, Order } from "../types/index";
 
 type BookingState = {
   point: Point | null;
   model: Model | null;
+  additional: Additional | null;
+  order: Order | null;
   setPoint: (point: Point | null) => void;
   setModel: (model: Model | null) => void;
+  setAdditional: (additional: Additional | null) => void;
+  setOrder: (order: Order | null) => void;
   clearFrom: (path: string) => void;
 };
 
@@ -27,15 +31,29 @@ const pageOrder = [
 export function BookingProvider({ children }: { children: React.ReactNode }) {
   const [point, setPoint] = useState<Point | null>(null);
   const [model, setModel] = useState<Model | null>(null);
+  const [additional, setAdditional] = useState<Additional | null>(null);
+  const [order, setOrder] = useState<Order | null>(null);
 
   const clearFrom = useCallback((path: string) => {
     const idx = pageOrder.indexOf(path);
     if (idx <= 1) setModel(null);
+    if (idx <= 2) setAdditional(null);
+    if (idx <= 3) setOrder(null);
   }, []);
 
   const value = useMemo(
-    () => ({ point, model, setPoint, setModel, clearFrom }),
-    [point, model, clearFrom],
+    () => ({
+      point,
+      model,
+      additional,
+      order,
+      setPoint,
+      setModel,
+      setAdditional,
+      setOrder,
+      clearFrom,
+    }),
+    [point, model, additional, order, clearFrom],
   );
 
   return (

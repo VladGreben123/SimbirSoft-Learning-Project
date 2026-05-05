@@ -1,14 +1,13 @@
-import styles from "./BookModelPage.module.css";
+import styles from "./BookAdditionalPage.module.css";
+import OrderSideInfo from "../../components/OrderSideInfo/OrderSideInfo";
+import { useBooking } from "../../context/BookingContext";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import BreadCrumbs from "../../components/BreadCrumbs/BreadCrumbs";
-import OrderSideInfo from "../../components/OrderSideInfo/OrderSideInfo";
-import OrderModelList from "../../components/OrderModelList/OrderModelList";
-import { useBooking } from "../../context/BookingContext";
+import OrderAdditionalForm from "../../components/OrderAdditionalForm/OrderAdditionalForm";
 
 function BookModelPage() {
-  const { point, additional } = useBooking();
-  const { model, setModel } = useBooking();
+  const { point, model, additional } = useBooking();
 
   return (
     <>
@@ -22,7 +21,7 @@ function BookModelPage() {
         />
         <main className={styles.main}>
           <div className={styles.orderContainer}>
-            <OrderModelList onModelSelect={setModel} activeModel={model} />
+            <OrderAdditionalForm />
             <OrderSideInfo />
           </div>
         </main>
