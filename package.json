@@ -10,9 +10,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,html,css,scss}\"",
     "format": "npm run prettier && npm run lint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "leaflet": "^1.9.4",
     "react": "^19.2.4",
     "react-datepicker": "^9.1.0",

@@ -30,6 +30,13 @@
   color: var(--color-black);
 }
 
+.orderId {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: normal;
+}
+
 @media (width <= 1440px) {
   .breadCrumbsContainer {
     padding: 0 64px;

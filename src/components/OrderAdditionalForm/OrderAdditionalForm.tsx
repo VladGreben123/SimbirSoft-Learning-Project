@@ -8,7 +8,7 @@ import DateRangePicker from "../DateRangePicker/DateRangePicker";
 function OrderAdditionalForm() {
   const { model, setAdditional } = useBooking();
   const [period, setPeriod] = useState("");
-  const [color, setColor] = useState("Любой");
+  const [color, setColor] = useState("");
   const [rate, setRate] = useState<Rate | null>(null);
   const [extra, setExtra] = useState<Extra[]>([]);
   const [dateFrom, setDateFrom] = useState<Date | null>(null);
@@ -72,12 +72,13 @@ function OrderAdditionalForm() {
   useEffect(() => {
     setAdditional({
       color,
+      dateStart: dateFrom,
       dateRange: period,
       rate,
       extras: extra,
       total,
     });
-  }, [color, period, rate, extra, total, setAdditional]);
+  }, [color, period, rate, extra, total, dateFrom, setAdditional]);
 
   return (
     <div className={styles.orderAdditionalContainer}>

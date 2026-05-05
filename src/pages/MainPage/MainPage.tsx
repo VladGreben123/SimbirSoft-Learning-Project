@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./MainPage.module.css";
 import Slider from "../../components/Slider/Slider";
 import Header from "../../components/Header/Header";
@@ -17,9 +18,9 @@ function MainPage() {
               Поминутная аренда авто твоего города
             </p>
             <button type="button" className={styles.button}>
-              <a href="/book/point" className={styles.bookButton}>
+              <Link to="/book/point" className={styles.bookButton}>
                 Забронировать
-              </a>
+              </Link>
             </button>
           </div>
           <div className={styles["image-panel"]}>

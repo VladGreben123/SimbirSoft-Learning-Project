@@ -29,7 +29,17 @@ function BreadCrumbs({
     { link: "/book/total", content: "Итого" },
   ];
   const location = useLocation();
-  const { clearFrom } = useBooking();
+  const { clearFrom, order } = useBooking();
+
+  if (order) {
+    return (
+      <div className={styles.breadCrumbsContainer}>
+        <div className={styles.breadCrumbs}>
+          <span className={styles.orderId}>Заказ №{order.id}</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.breadCrumbsContainer}>
@@ -38,10 +48,10 @@ function BreadCrumbs({
           <>
             <Link
               key={item.link}
-              to={pointSelected ? item.link : location.pathname}
+              to={item.visited ? item.link : location.pathname}
               className={`${
                 location.pathname === item.link ? styles.active : styles.passive
-              } 
+              }
                  ${styles.breadCrumbsLink}
                  ${item.visited && location.pathname !== item.link ? styles.visited : ""}`}
               aria-disabled={item.visited}

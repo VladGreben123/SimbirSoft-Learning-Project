@@ -5,6 +5,8 @@ const ModelData: Model[] = [
   {
     id: 1,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -14,6 +16,8 @@ const ModelData: Model[] = [
   {
     id: 2,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Премиум",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -23,6 +27,8 @@ const ModelData: Model[] = [
   {
     id: 3,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -32,6 +38,8 @@ const ModelData: Model[] = [
   {
     id: 4,
     name: "i30 N",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -41,6 +49,8 @@ const ModelData: Model[] = [
   {
     id: 5,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -50,6 +60,8 @@ const ModelData: Model[] = [
   {
     id: 6,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -59,6 +71,8 @@ const ModelData: Model[] = [
   {
     id: 7,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -68,6 +82,8 @@ const ModelData: Model[] = [
   {
     id: 8,
     name: "i30 N",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -77,6 +93,8 @@ const ModelData: Model[] = [
   {
     id: 9,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -86,6 +104,8 @@ const ModelData: Model[] = [
   {
     id: 10,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -95,6 +115,8 @@ const ModelData: Model[] = [
   {
     id: 11,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -104,6 +126,8 @@ const ModelData: Model[] = [
   {
     id: 12,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -113,6 +137,8 @@ const ModelData: Model[] = [
   {
     id: 13,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -122,6 +148,8 @@ const ModelData: Model[] = [
   {
     id: 14,
     name: "i30 N",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -131,6 +159,8 @@ const ModelData: Model[] = [
   {
     id: 15,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
@@ -140,6 +170,8 @@ const ModelData: Model[] = [
   {
     id: 16,
     name: "ELANTRA",
+    carNumber: "K 761 HA 73",
+    fuel: 100,
     class: "Эконом",
     minPrice: "10 000",
     maxPrice: "25 000",
