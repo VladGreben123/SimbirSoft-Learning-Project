@@ -2,12 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
 import styles from "./AdminAuthPage.module.css";
 import Logo from "../../assets/Icons/logoIcon.svg?react";
+import Show from "../../assets/Icons/show.svg?react";
+import Hide from "../../assets/Icons/hide.svg?react";
 
 function AdminAuthPage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState<string | null>(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleEmailChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -61,6 +64,7 @@ function AdminAuthPage() {
                 <input
                   id="email"
                   type="email"
+                  maxLength={150}
                   className={styles.input}
                   onChange={handleEmailChange}
                   onBlur={handleBlur}
@@ -73,12 +77,26 @@ function AdminAuthPage() {
                 <label htmlFor="password" className={styles.authLabel}>
                   Пароль
                 </label>
-                <input
-                  id="password"
-                  type="password"
-                  className={styles.input}
-                  onChange={handlePasswordChange}
-                />
+                <div className={styles.password}>
+                  <input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    maxLength={150}
+                    className={styles.inputPassword}
+                    onChange={handlePasswordChange}
+                  />
+                  {showPassword ? (
+                    <Show
+                      className={styles.togglePassword}
+                      onClick={() => setShowPassword((prev) => !prev)}
+                    />
+                  ) : (
+                    <Hide
+                      className={styles.togglePassword}
+                      onClick={() => setShowPassword((prev) => !prev)}
+                    />
+                  )}
+                </div>
               </div>
               <div className={styles.authButtons}>
                 <a href="#" className={styles.request}>

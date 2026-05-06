@@ -78,10 +78,42 @@
 }
 
 .input {
+  padding-left: 32px;
   width: 100%;
   height: 29px;
   border-radius: 3px;
   border: 0.5px solid #becad6;
+}
+
+.inputPassword {
+  padding-left: 12px;
+  padding-right: 36px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.password {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 29px;
+  border-radius: 3px;
+  border: 0.5px solid #becad6;
+}
+
+.password:active {
+  border: 1px solid var(--color-black);
+}
+
+.togglePassword {
+  position: absolute;
+  background: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  right: 8px;
 }
 
 .error {
