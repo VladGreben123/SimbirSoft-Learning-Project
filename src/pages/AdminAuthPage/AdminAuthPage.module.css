@@ -78,7 +78,7 @@
 }
 
 .input {
-  padding-left: 32px;
+  padding-left: 12px;
   width: 100%;
   height: 29px;
   border-radius: 3px;
@@ -114,6 +114,22 @@
   width: 20px;
   height: 20px;
   right: 8px;
+  padding: 0;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.togglePassword:active {
+  background: transparent;
+}
+
+.togglePassword::after {
+  content: none;
+}
+
+.togglePasswordIcon {
+  width: 20px;
+  height: 20px;
 }
 
 .error {

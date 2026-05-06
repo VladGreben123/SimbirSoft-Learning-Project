@@ -8,13 +8,13 @@ import Hide from "../../assets/Icons/hide.svg?react";
 function AdminAuthPage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState<string | null>(null);
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const handleEmailChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setEmail(e.target.value);
+      setEmail(e.target.value.trim());
       if (emailError) setEmailError(null);
     },
     [emailError],
@@ -22,7 +22,7 @@ function AdminAuthPage() {
 
   const handlePasswordChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      setPassword(e.target.value);
+      setPassword(e.target.value.trim());
     },
     [],
   );
@@ -85,17 +85,17 @@ function AdminAuthPage() {
                     className={styles.inputPassword}
                     onChange={handlePasswordChange}
                   />
-                  {showPassword ? (
-                    <Show
-                      className={styles.togglePassword}
-                      onClick={() => setShowPassword((prev) => !prev)}
-                    />
-                  ) : (
-                    <Hide
-                      className={styles.togglePassword}
-                      onClick={() => setShowPassword((prev) => !prev)}
-                    />
-                  )}
+                  <button
+                    type="button"
+                    className={styles.togglePassword}
+                    onClick={() => setShowPassword((prev) => !prev)}
+                  >
+                    {showPassword ? (
+                      <Hide className={styles.togglePasswordIcon} />
+                    ) : (
+                      <Show className={styles.togglePasswordIcon} />
+                    )}
+                  </button>
                 </div>
               </div>
               <div className={styles.authButtons}>
