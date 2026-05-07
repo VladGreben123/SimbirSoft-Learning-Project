@@ -1,16 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useCallback, useState } from "react";
-import styles from "./AdminAuthPage.module.css";
+import styles from "./AdminRegPage.module.css";
 import Logo from "../../assets/Icons/logoIcon.svg?react";
 import Show from "../../assets/Icons/show.svg?react";
 import Hide from "../../assets/Icons/hide.svg?react";
 
-function AdminAuthPage() {
+function AdminRegPage() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState<string | null>(null);
   const [password, setPassword] = useState("");
+  const [passwordRepeat, setPasswordRepeat] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showPasswordRepeat, setShowPasswordRepeat] = useState(false);
 
   const handleEmailChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +25,13 @@ function AdminAuthPage() {
   const handlePasswordChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       setPassword(e.target.value.trim());
+    },
+    [],
+  );
+
+  const handlePasswordRepeatChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setPasswordRepeat(e.target.value.trim());
     },
     [],
   );
@@ -42,7 +51,7 @@ function AdminAuthPage() {
     const error = validateEmail(email);
     setEmailError(error);
     if (error) return;
-    if (email === "admin@admin.com" && password === "admin")
+    if (password === passwordRepeat)
       navigate("/admin/panel");
   };
 
@@ -54,7 +63,7 @@ function AdminAuthPage() {
       </header>
       <main className={styles.main}>
         <div className={styles.card}>
-          <div className={styles.cardHeader}>Вход</div>
+          <div className={styles.cardHeader}>Регистрация</div>
           <div className={styles.authInputs}>
             <form onSubmit={handleSubmit} className={styles.authForm}>
               <div className={styles.authEmail}>
@@ -98,16 +107,41 @@ function AdminAuthPage() {
                   </button>
                 </div>
               </div>
+              <div className={styles.authPassword}>
+                <label htmlFor="password" className={styles.authLabel}>
+                  Повторите пароль
+                </label>
+                <div className={styles.password}>
+                  <input
+                    id="password"
+                    type={showPasswordRepeat ? "text" : "password"}
+                    maxLength={150}
+                    className={styles.inputPassword}
+                    onChange={handlePasswordRepeatChange}
+                  />
+                  <button
+                    type="button"
+                    className={styles.togglePassword}
+                    onClick={() => setShowPasswordRepeat((prev) => !prev)}
+                  >
+                    {showPasswordRepeat? (
+                      <Hide className={styles.togglePasswordIcon} />
+                    ) : (
+                      <Show className={styles.togglePasswordIcon} />
+                    )}
+                  </button>
+                </div>
+              </div>
               <div className={styles.authButtons}>
-                <Link to="/admin/registration" className={styles.request}>
-                  Запросить доступ
+                <Link to="/admin/login" className={styles.request}>
+                  Войти
                 </Link>
                 <button
                   type="submit"
                   className={styles.buttonEnter}
                   disabled={!email || !password}
                 >
-                  Войти
+                  Запросить доступ
                 </button>
               </div>
             </form>
@@ -118,4 +152,4 @@ function AdminAuthPage() {
   );
 }
 
-export default AdminAuthPage;
+export default AdminRegPage;
