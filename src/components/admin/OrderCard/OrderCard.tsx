@@ -83,7 +83,9 @@ function OrderCard({ order, onApprove, onReject, onEdit }: Props) {
           className={`${styles.actionButton} ${styles.actionApprove}`}
           onClick={() => onApprove?.(order)}
         >
-          <ApproveIcon className={`${styles.actionIcon} ${styles.actionIconApprove}`} />
+          <ApproveIcon
+            className={`${styles.actionIcon} ${styles.actionIconApprove}`}
+          />
           Готово
         </button>
         <button
@@ -91,7 +93,9 @@ function OrderCard({ order, onApprove, onReject, onEdit }: Props) {
           className={`${styles.actionButton} ${styles.actionReject}`}
           onClick={() => onReject?.(order)}
         >
-          <RejectIcon className={`${styles.actionIcon} ${styles.actionIconReject}`} />
+          <RejectIcon
+            className={`${styles.actionIcon} ${styles.actionIconReject}`}
+          />
           Отмена
         </button>
         <button
@@ -99,7 +103,9 @@ function OrderCard({ order, onApprove, onReject, onEdit }: Props) {
           className={`${styles.actionButton} ${styles.actionEdit}`}
           onClick={() => onEdit?.(order)}
         >
-          <EditIcon className={`${styles.actionIcon} ${styles.actionIconEdit}`} />
+          <EditIcon
+            className={`${styles.actionIcon} ${styles.actionIconEdit}`}
+          />
           Изменить
         </button>
       </div>

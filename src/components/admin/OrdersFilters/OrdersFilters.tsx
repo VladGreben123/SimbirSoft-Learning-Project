@@ -52,21 +52,21 @@ function OrdersFilters({ onApply }: Props) {
     <div className={styles.filters}>
       <div className={styles.filterContainer}>
         {filterConfig.map((filter) => (
-        <div key={filter.key} className={styles.dropdown}>
-          <select
-            className={styles.dropdownSelect}
-            value={values[filter.key]}
-            onChange={handleChange(filter.key)}
-          >
-            {filter.options.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-          <Dropdown className={styles.dropdownIcon} />
-        </div>
-      ))}
+          <div key={filter.key} className={styles.dropdown}>
+            <select
+              className={styles.dropdownSelect}
+              value={values[filter.key]}
+              onChange={handleChange(filter.key)}
+            >
+              {filter.options.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <Dropdown className={styles.dropdownIcon} />
+          </div>
+        ))}
       </div>
       <button
         type="button"

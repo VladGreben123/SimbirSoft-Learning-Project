@@ -9,7 +9,7 @@
     inset 0 0.5px 0 #e0e2e8;
 }
 
-.filterContainer{
+.filterContainer {
   display: flex;
   gap: 12px;
 }

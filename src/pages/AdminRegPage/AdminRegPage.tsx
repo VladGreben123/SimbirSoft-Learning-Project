@@ -51,8 +51,7 @@ function AdminRegPage() {
     const error = validateEmail(email);
     setEmailError(error);
     if (error) return;
-    if (password === passwordRepeat)
-      navigate("/admin/panel");
+    if (password === passwordRepeat) navigate("/admin/panel");
   };
 
   return (
@@ -126,9 +125,11 @@ function AdminRegPage() {
                     type="button"
                     className={styles.togglePassword}
                     onClick={() => setShowPasswordRepeat((prev) => !prev)}
-                    aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"}
+                    aria-label={
+                      showPassword ? "Скрыть пароль" : "Показать пароль"
+                    }
                   >
-                    {showPasswordRepeat? (
+                    {showPasswordRepeat ? (
                       <Hide className={styles.togglePasswordIcon} />
                     ) : (
                       <Show className={styles.togglePasswordIcon} />

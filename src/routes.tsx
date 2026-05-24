@@ -18,7 +18,7 @@ const routes = [
   { path: "/book/total", element: <BookTotalPage /> },
   { path: "/admin/login", element: <AdminAuthPage /> },
   { path: "/admin/registration", element: <AdminRegPage /> },
-  { path: "/admin/panel/orders", element: <AdminOrderPage /> }
+  { path: "/admin/panel/orders", element: <AdminOrderPage /> },
 ];
 
 export default routes;

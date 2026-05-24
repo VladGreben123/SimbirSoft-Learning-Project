@@ -91,7 +91,9 @@ function AdminAuthPage() {
                     type="button"
                     className={styles.togglePassword}
                     onClick={() => setShowPassword((prev) => !prev)}
-                    aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"}
+                    aria-label={
+                      showPassword ? "Скрыть пароль" : "Показать пароль"
+                    }
                   >
                     {showPassword ? (
                       <Hide className={styles.togglePasswordIcon} />
