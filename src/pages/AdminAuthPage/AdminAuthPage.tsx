@@ -64,6 +64,7 @@ function AdminAuthPage() {
                 <input
                   id="email"
                   type="email"
+                  value={email}
                   maxLength={150}
                   className={styles.input}
                   onChange={handleEmailChange}
@@ -81,6 +82,7 @@ function AdminAuthPage() {
                   <input
                     id="password"
                     type={showPassword ? "text" : "password"}
+                    value={password}
                     maxLength={150}
                     className={styles.inputPassword}
                     onChange={handlePasswordChange}
@@ -89,6 +91,7 @@ function AdminAuthPage() {
                     type="button"
                     className={styles.togglePassword}
                     onClick={() => setShowPassword((prev) => !prev)}
+                    aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"}
                   >
                     {showPassword ? (
                       <Hide className={styles.togglePasswordIcon} />

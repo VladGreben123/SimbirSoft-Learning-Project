@@ -73,6 +73,7 @@ function AdminRegPage() {
                 <input
                   id="email"
                   type="email"
+                  value={email}
                   maxLength={150}
                   className={styles.input}
                   onChange={handleEmailChange}
@@ -90,6 +91,7 @@ function AdminRegPage() {
                   <input
                     id="password"
                     type={showPassword ? "text" : "password"}
+                    value={password}
                     maxLength={150}
                     className={styles.inputPassword}
                     onChange={handlePasswordChange}
@@ -108,13 +110,14 @@ function AdminRegPage() {
                 </div>
               </div>
               <div className={styles.authPassword}>
-                <label htmlFor="password" className={styles.authLabel}>
+                <label htmlFor="passwordRepeat" className={styles.authLabel}>
                   Повторите пароль
                 </label>
                 <div className={styles.password}>
                   <input
-                    id="password"
+                    id="passwordRepeat"
                     type={showPasswordRepeat ? "text" : "password"}
+                    value={passwordRepeat}
                     maxLength={150}
                     className={styles.inputPassword}
                     onChange={handlePasswordRepeatChange}
@@ -123,6 +126,7 @@ function AdminRegPage() {
                     type="button"
                     className={styles.togglePassword}
                     onClick={() => setShowPasswordRepeat((prev) => !prev)}
+                    aria-label={showPassword ? "Скрыть пароль" : "Показать пароль"}
                   >
                     {showPasswordRepeat? (
                       <Hide className={styles.togglePasswordIcon} />
