@@ -38,7 +38,7 @@ const pageConfig: Record<
 };
 
 function OrderSideInfo() {
-  const { model, point, additional, order, setOrder } = useBooking();
+  const { model, point, additional, order, setOrder, addOrder } = useBooking();
   const location = useLocation();
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
@@ -60,16 +60,18 @@ function OrderSideInfo() {
     ) =>
       () => {
         if (pointValue && modelValue && additionalValue) {
-          setOrder({
+          const newOrder = {
             point: pointValue,
             model: modelValue,
             additional: additionalValue,
-            id: "RU58491823",
-          });
+            id: `RU${Date.now()}`,
+          };
+          setOrder(newOrder);
+          addOrder(newOrder);
           setModal(false);
         }
       },
-    [setOrder],
+    [setOrder, addOrder],
   );
 
   return (

@@ -44,6 +44,7 @@ export type Additional = {
   color: string;
   dateRange: string;
   dateStart: Date | null;
+  dateEnd: Date | null;
   rate: Rate | null;
   extras: Extra[];
   total: number;

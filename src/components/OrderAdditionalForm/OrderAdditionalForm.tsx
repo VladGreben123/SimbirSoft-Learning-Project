@@ -73,12 +73,13 @@ function OrderAdditionalForm() {
     setAdditional({
       color,
       dateStart: dateFrom,
+      dateEnd: dateTo,
       dateRange: period,
       rate,
       extras: extra,
       total,
     });
-  }, [color, period, rate, extra, total, dateFrom, setAdditional]);
+  }, [color, period, rate, extra, total, dateFrom, dateTo, setAdditional]);
 
   return (
     <div className={styles.orderAdditionalContainer}>

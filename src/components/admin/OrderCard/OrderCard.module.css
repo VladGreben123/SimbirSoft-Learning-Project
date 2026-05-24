@@ -1,0 +1,155 @@
+.order {
+  display: grid;
+  grid-template-columns: 181px 287px 1fr auto auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.order + .order {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 0.5px solid #e0e2e8;
+}
+
+.orderImage {
+  width: 181px;
+  height: 89px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: -0.409px;
+}
+
+.orderTitle {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: var(--color-black);
+}
+
+.orderModel {
+  color: var(--color-black);
+}
+
+.orderMeta {
+  color: #889098;
+}
+
+.orderColor {
+  color: var(--color-black);
+}
+
+.orderColorValue {
+  color: #868e96;
+}
+
+.orderExtras {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.orderExtra {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.orderExtraInput {
+  width: 13px;
+  height: 13px;
+  border-radius: 1px;
+}
+
+.orderExtraInput:not(:disabled) {
+  border-color: var(--color-main-accent);
+}
+
+.orderExtraInput:disabled {
+  border-color: #becad6;
+  cursor: not-allowed;
+}
+
+.orderExtraLabel {
+  font-family: Roboto, sans-serif;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: -0.175px;
+  color: var(--color-black);
+}
+
+.orderExtraLabelMuted {
+  color: #999;
+}
+
+.orderPrice {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.754px;
+  color: var(--color-black);
+  white-space: nowrap;
+}
+
+.orderActions {
+  display: flex;
+  width: 213.5px;
+  height: 24px;
+}
+
+.actionButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+  background: var(--color-bg);
+  border: 0.5px solid #becad6;
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: -0.346px;
+  color: #5a6169;
+  cursor: pointer;
+}
+
+.actionButton + .actionButton {
+  border-left: none;
+}
+
+.actionApprove {
+  border-radius: 4px 0 0 4px;
+}
+
+.actionEdit {
+  border-radius: 0 4px 4px 0;
+}
+
+.actionIcon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.actionIconApprove {
+  color: #17c671;
+}
+
+.actionIconReject {
+  color: #c4183c;
+}
+
+.actionIconEdit {
+  color: #818ea3;
+}

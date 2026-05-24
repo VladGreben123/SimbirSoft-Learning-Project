@@ -43,7 +43,7 @@ function AdminAuthPage() {
     setEmailError(error);
     if (error) return;
     if (email === "admin@admin.com" && password === "admin")
-      navigate("/admin/panel");
+      navigate("/admin/panel/orders");
   };
 
   return (
