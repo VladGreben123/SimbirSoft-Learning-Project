@@ -3,6 +3,8 @@ import BookPointPage from "./pages/BookPointPage/BookPointPage";
 import BookModelPage from "./pages/BookModelPage/BookModelPage";
 import BookAdditionalPage from "./pages/BookAdditionalPage/BookAdditionalPage";
 import BookTotalPage from "./pages/BookTotalPage/BookTotalPage";
+import AdminAuthPage from "./pages/AdminAuthPage/AdminAuthPage";
+import AdminRegPage from "./pages/AdminRegPage/AdminRegPage";
 
 const routes = [
   { path: "/", element: <MainPage /> },
@@ -13,6 +15,8 @@ const routes = [
     element: <BookAdditionalPage />,
   },
   { path: "/book/total", element: <BookTotalPage /> },
+  { path: "/admin/login", element: <AdminAuthPage /> },
+  { path: "/admin/registration", element: <AdminRegPage /> },
 ];
 
 export default routes;
